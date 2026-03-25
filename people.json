@@ -1,0 +1,7197 @@
+[
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q23728"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1947-07-02T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Larry David"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q23760"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1955-01-06T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Rowan Atkinson"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q23811"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1972-09-23T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Karl Pilkington"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q23814"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1974-11-24T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Stephen Merchant"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q23844"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1961-05-06T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "George Clooney"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q23880"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1968-09-09T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Lila Downs"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q23884"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1906-03-06T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Lou Costello"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q23888"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1897-10-02T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Bud Abbott"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q23891"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1983-08-20T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Andrew Garfield"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q23937"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1882-10-02T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Ethel Grey Terry"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q23953"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1900-07-07T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Maria Bard"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q23957"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1879-10-03T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Warner Oland"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q23997"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1985-12-18T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Tara Conner"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q24015"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1966-04-11T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Steve Bullock"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q24051"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1917-08-13T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Gloria Dickson"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q24057"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1970-05-10T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Dallas Roberts"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q24078"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1905-02-24T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "La Jana"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q24304"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1991-12-26T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Eden Sher"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q24368"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1993-10-08T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Barbara Palvin"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q24541"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1863-06-27T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "E. H. Calvert"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q24632"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1967-03-11T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "John Barrowman"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q24658"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1981-06-06T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Yunchen Juan"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q24829"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1915-05-06T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Orson Welles"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q24842"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1929-05-23T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Ulla Jacobsson"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q24889"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1965-07-26T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Ran Masaki"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q24962"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1941-01-08T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Graham Chapman"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q25014"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1939-10-27T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "John Cleese"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q25055"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1900-03-02T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Matilde Mu\u00f1oz Sampedro"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q25078"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1940-11-22T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Terry Gilliam"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q25080"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1947-07-10T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Ilya Oleynikov"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q25089"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1935-11-30T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Woody Allen"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q25100"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1953-08-19T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Nanni Moretti"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q25120"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1922-03-05T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Pier Paolo Pasolini"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q25144"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1959-07-26T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Kevin Spacey"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q25153"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1950-02-12T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Angelo Branduardi"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q25162"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1964-11-30T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Fabio Fazio"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q25186"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1952-07-24T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Gus Van Sant"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q25191"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1970-07-30T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Christopher Nolan"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q25278"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1985-12-08T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Dwight Howard"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q25529"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1967-10-18T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Eric Stuart"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q25529"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1968-10-18T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Eric Stuart"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q25547"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1990-11-23T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Poornitha"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q25722"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1983-02-28T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Ice La Fox"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q25824"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1950-03-21T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Vera Grabocka"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q25890"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1979-03-17T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Stephen Kramer Glickman"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q26045"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1900-10-05T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Varvara Myasnikova"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q26047"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1908-03-09T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Leonid Kmit"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q26053"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1989-08-15T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Carlos PenaVega"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q26058"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1990-07-16T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "James Maslow"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q26062"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1924-08-15T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Robert Bolt"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q26091"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1988-08-16T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Kevin Schmidt"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q26118"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1910-09-14T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Jack Hawkins"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q26173"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1978-04-26T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Pablo Schreiber"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q26184"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1901-12-04T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Nikolai Simonov"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q26208"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1922-04-03T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Carlo Lizzani"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q26231"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1976-03-14T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Corey Stoll"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q26274"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1979-11-10T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Nina Mercedez"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q26294"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1989-09-14T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Logan Henderson"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q26372"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1947-01-18T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Takeshi Kitano"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q26378"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1998-01-28T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Ariel Winter"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q26625"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1968-09-16T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Marc Anthony"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q26636"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1980-06-18T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "David Giuntoli"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q26642"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1920-10-16T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Gert van den Bergh"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q26668"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1972-04-16T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Raymond Chan"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q26673"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1927-01-01T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Li Moran"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q26688"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1957-07-10T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Yuri Stoyanov"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q26741"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1969-08-10T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Brian Drummond"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q26780"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1991-04-11T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Daiki Arioka"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q26780"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1991-04-15T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Daiki Arioka"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q26806"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1944-11-17T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Danny DeVito"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q26848"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1955-05-14T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Leon Allen White"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q26962"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1989-05-23T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Natsuna Watanabe"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q27014"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1934-01-26T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Oldo Hlav\u00e1\u010dek"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q27214"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1944-02-13T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Jerry Springer"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q27277"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1958-05-28T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Louis Mustillo"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q27322"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1971-06-25T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Jason Lewis"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q27486"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1945-03-09T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Katja Ebstein"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q27652"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1978-10-10T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Kim Ji-han"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q28151"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1949-04-14T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "John Shea"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q28152"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1939-05-18T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Hark Bohm"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q28170"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1972-05-22T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Max Brooks"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q28211"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1975-09-22T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Mireille Enos"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q28262"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1979-11-25T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Joel Kinnaman"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q28288"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1982-01-06T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Eddie Redmayne"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q28310"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1976-06-17T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Scott Adkins"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q28463"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1979-05-19T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "B\u00e9r\u00e9nice Marlohe"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q28487"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1976-07-07T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "B\u00e9r\u00e9nice Bejo"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q28493"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1962-12-22T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Ralph Fiennes"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q28498"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1980-02-21T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Brendan Sexton III"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q28556"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1967-03-29T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Michel Hazanavicius"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q28558"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1973-05-20T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Patricia Navidad"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q28717"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1973-06-12T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Mel Rodriguez"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q28732"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1959-02-24T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Beth Broderick"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q28783"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1944-11-02T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Michael Buffer"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q28798"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1992-12-03T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Jessy Mendiola"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q28885"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1910-01-08T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Galina Ulanova"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q28941"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1886-02-02T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Frank Lloyd"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q29055"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1971-10-13T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Sacha Baron Cohen"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q29086"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1970-01-24T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Matthew Lillard"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q29092"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1914-09-12T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Desmond Llewelyn"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q1933"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1981-04-25T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Anja P\u00e4rson"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q7407"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1970-04-29T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Andre Agassi"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q11187"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1974-04-10T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Georgi Kandelaki"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q11662"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1969-06-14T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Steffi Graf"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q15542"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1974-07-13T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Jefferson P\u00e9rez"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q16849"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1963-07-17T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Matti Nyk\u00e4nen"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q18797"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1976-03-25T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Wladimir Klitschko"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q26846"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "-0500-01-01T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Archelaus I of Macedon"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q31082"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1959-12-21T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Florence Griffith Joyner"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q31370"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1962-10-11T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Pavel \u010cern\u00fd"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q31377"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1975-04-22T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Pavel Horv\u00e1th"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q40421"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1951-10-11T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Miroslav Dvo\u0159\u00e1k"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q41152"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1969-05-08T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Akebono Tar\u014d"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q44158"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1969-01-18T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Dave Bautista"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q46667"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1879-05-27T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Nelson Margetts"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q47085"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1932-11-13T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Olga Fikotov\u00e1"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q50878"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1919-01-23T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Nina Dumbadze"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q50878"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1919-05-23T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Nina Dumbadze"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q57907"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1947-02-14T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Heide Rosendahl"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q62177"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1926-07-24T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Hans G\u00fcnter Winkler"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q62294"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1942-09-26T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Ingrid Becker"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q62545"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1974-02-11T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Jaroslav \u0160pa\u010dek"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q64497"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1978-10-15T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Fouad Abiad"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q64756"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1973-07-29T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "V\u00edctor Mart\u00ednez"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q66850"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1988-09-27T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "David Baramidze"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q72339"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1951-06-18T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "David Kipiani"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q72339"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1951-11-18T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "David Kipiani"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q73191"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1939-10-18T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Josef \u010cern\u00fd"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q73797"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1957-06-13T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Antonio Neves Braga"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q74989"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1955-04-08T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Aleksandre Chivadze"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q76455"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1987-02-09T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Magdalena Neuner"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q77389"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1948-11-06T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Robert H\u00fcbner"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q78851"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1964-10-25T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Andreas M\u00fcnzer"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q80030"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1990-10-02T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Bettina Dajka"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q81496"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1982-01-29T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Adam van Koeverden"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q87442"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1973-02-15T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Anna Dogonadze"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q87709"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1972-07-12T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Ronny Rockel"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q89267"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1930-06-09T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Karl Heinz Klee"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q91184"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1941-12-23T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Helmut Reichmann"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q91448"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1960-07-07T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Ines Geipel"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q92281"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1966-11-27T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Heinz Ollesch"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q104009"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1941-08-27T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Michael Sauer"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q109255"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1954-11-14T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Bernard Hinault"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q113417"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "-0711-01-01T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Terpander"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q114667"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1962-08-27T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Sarah Wiener"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q118323"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1965-11-04T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Dirk Schachtsiek"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q126152"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1973-01-13T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Uta Albanese"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q126752"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1870-11-30T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Alexander Munro"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q129197"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1979-09-03T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Petr \u010c\u00e1slava"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q129742"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1960-07-29T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Jind\u0159ich Pansk\u00fd"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q139283"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1919-03-18T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Laila Schou Nilsen"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q155477"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1977-07-10T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Levan Kobiashvili"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q155514"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1971-02-28T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "David Khakhaleishvili"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q157847"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1954-03-06T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Toni Schumacher"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q159577"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1963-04-26T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Jet Li"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q162043"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1942-01-25T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Eus\u00e9bio"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q169044"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1954-02-06T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Zden\u011bk Pecka"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q171295"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1972-08-30T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Pavel Nedv\u011bd"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q173992"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1950-02-12T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Josef Pe\u0161ice"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q180636"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1929-06-17T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Tigran Petrosian"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q182046"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1404-02-23T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Leon Battista Alberti"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q192031"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1978-02-27T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Kakha Kaladze"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q193690"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1988-11-25T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Nodar Kumaritashvili"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q195317"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1976-10-23T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Aleksandre Iashvili"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q195317"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1977-10-23T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Aleksandre Iashvili"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q203028"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1936-06-26T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Tom\u00e1\u0161 Posp\u00edchal"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q209390"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1962-03-03T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Jackie Joyner-Kersee"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q218994"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1891-01-01T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Zolt\u00e1n Mechlovits"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q220534"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1961-10-18T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Zoran Matkovi\u0107"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q221185"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1983-11-17T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Kate\u0159ina Emmons"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q224033"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1972-03-30T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Karel Poborsk\u00fd"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q225271"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1970-08-17T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Istv\u00e1n Kov\u00e1cs"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q229503"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1942-05-03T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "V\u011bra \u010c\u00e1slavsk\u00e1"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q230353"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1986-03-28T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Barbora Str\u00fdcov\u00e1"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q231630"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1941-05-03T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Nona Gaprindashvili"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q232720"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1961-01-17T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Maia Chiburdanidze"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q233572"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1921-01-09T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "\u00c1gnes Keleti"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q233683"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1951-01-26T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Jarmila Kratochv\u00edlov\u00e1"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q234408"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1922-09-19T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Dana Z\u00e1topkov\u00e1"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q237976"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1990-01-07T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Elene Gedevanishvili"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q238041"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1943-05-11T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Nancy Greene"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q240871"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1969-02-01T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Nino Salukvadze"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q240984"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1947-07-28T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Elena Novikova-Belova"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q242201"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1987-02-01T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Ronda Rousey"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q245338"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1921-01-06T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Zygmunt Kiszkurno"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q247704"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1920-12-22T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Vlasta Depetrisov\u00e1"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q250580"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1939-09-10T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Zarbeg Beriashvili"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q253961"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1949-10-13T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Nana Alexandria"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q254108"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1984-07-10T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Mar\u00eda Julia Mantilla"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q255011"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1962-02-19T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Hana Mandl\u00edkov\u00e1"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q255540"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1983-01-08T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Mikl\u00f3s G\u00f3r-Nagy"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q259851"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1962-02-12T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Nana Ioseliani"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q261302"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1973-02-17T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Marek \u0160vec"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q264664"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1973-07-29T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Denis Urubko"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q265458"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1911-09-15T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Micha\u0142 G\u00f3rski"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q267195"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "-0439-01-01T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Cynisca"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q268229"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "-0850-01-01T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Echembrotus"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q274373"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1971-12-23T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Ewa Wi\u015bnierska"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q278239"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1990-08-08T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Vladim\u00edr Darida"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q278793"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1958-05-01T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "A. J. Hackett"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "athlete"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q48884"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1911-05-01T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Gholam-Hossein Banan"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q48959"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1989-01-04T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Labrinth"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q49001"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1955-11-13T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Whoopi Goldberg"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q49004"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1952-08-18T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Patrick Swayze"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q49017"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1959-06-11T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Hugh Laurie"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q49075"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1933-05-11T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Louis Farrakhan"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q49319"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1979-01-07T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Aloe Blacc"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q49474"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1983-08-12T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Kana Asumi"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q49524"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1989-02-25T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Kana Hanazawa"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q49547"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1974-12-27T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Fumiko Orikasa"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q49554"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1979-05-30T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Rie Kugimiya"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q49563"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1962-05-31T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Noriko Hidaka"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q49564"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1965-01-05T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Rei Sakuma"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q49566"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1976-03-30T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Ayako Kawasumi"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q49569"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1980-02-06T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Mamiko Noto"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q49573"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1968-11-12T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Aya Hisakawa"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q49575"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1917-10-21T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Dizzy Gillespie"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q49734"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1941-09-19T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Cass Elliot"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q49735"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1940-08-19T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Johnny Nash"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q49847"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1981-08-14T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Ray William Johnson"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q49881"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1965-03-23T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Marti Pellow"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q49888"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1940-03-21T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Solomon Burke"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q49941"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1951-11-26T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Ilona Staller"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q49993"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1985-10-25T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Ayahi Takagaki"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q50003"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1920-06-15T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Alberto Sordi"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q50016"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1983-11-26T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Emiri Kat\u014d"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q50022"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1986-11-26T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Kanae It\u014d"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q50023"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1985-07-16T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Y\u014dko Hikasa"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q50025"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1990-02-04T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Haruka Tomatsu"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q50026"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1977-09-14T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Miyu Matsuki"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q50029"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1991-09-17T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Minako Kotobuki"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q50031"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1987-12-16T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Hisako Kanemoto"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q50033"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1976-09-20T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Yui Horie"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q50034"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1929-08-18T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Hugues Aufray"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q50593"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1981-11-19T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "DJ Tukutz"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q50594"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1983-01-06T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Mithra Jin"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q50608"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1941-10-09T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Trent Lott"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q50797"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1955-07-21T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Taco"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q50825"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1954-04-05T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Stan Ridgway"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q50949"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1937-09-08T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Helga Hahnemann"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q51010"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1960-08-17T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Stephan Eicher"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q51015"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1963-01-04T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Thomas Fersen"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q51023"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1972-12-22T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Vanessa Paradis"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q51094"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1957-05-16T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Yuri Shevchuk"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q51101"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1980-09-15T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Jolin Tsai"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q51110"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1979-07-30T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Show Lo"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q51139"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1942-09-27T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Alvin Stardust"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q51169"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1984-10-11T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Jane Zhang"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q51319"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1956-08-27T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Glen Matlock"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q51603"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1969-12-25T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Lili Haydn"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q51960"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1967-07-01T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Marisa Monte"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q52345"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1980-06-01T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Oliver James"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q52392"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1946-04-19T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Tim Curry"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q52440"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1968-01-14T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "LL Cool J"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q52583"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1985-11-21T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Carly Rae Jepsen"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q53068"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1567-05-15T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Claudio Monteverdi"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q53169"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1976-09-17T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Peja"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q53185"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1956-04-27T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Eleni Tzoka"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q53186"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1965-01-01T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Krzysztof Grabowski"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q53198"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1947-09-19T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Urszula Sipi\u0144ska"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q53453"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1944-05-27T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Alain Souchon"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q53549"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1977-09-06T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "N.O.R.E."
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q53603"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1943-01-22T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Tam\u00e1s Cseh"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q53714"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1989-02-17T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Chord Overstreet"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q53939"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1944-01-17T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Fran\u00e7oise Hardy"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q54348"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1969-10-15T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Yoon Jong-shin"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q54350"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1979-01-26T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Kim Bum-soo"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q54351"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1966-12-05T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Lee Seung-chul"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q54353"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1975-01-01T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Yoon Gun"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q54354"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1991-06-01T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Jang Jae-in"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q54815"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1976-05-16T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Dina Rae"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q54836"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1992-07-03T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Molly Sand\u00e9n"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q54858"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1992-10-14T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Savannah Outen"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q54861"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1996-06-12T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Anna Margaret"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q54867"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1989-02-24T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Trace Cyrus"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q54868"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "2000-01-08T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Noah Cyrus"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q54885"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1930-12-26T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Jean Ferrat"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q55171"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1949-09-25T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Pedro Almod\u00f3var"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q55207"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1945-10-21T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Nikita Mikhalkov"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q55365"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1962-06-13T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Cezary Pazura"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q55373"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1946-06-08T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Piotr Fronczewski"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q55390"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1963-06-24T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Pawe\u0142 Kukiz"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q55436"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1981-12-29T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Natalia Jim\u00e9nez"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q55449"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1982-05-21T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Tay Zonday"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q55456"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1921-03-22T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Nino Manfredi"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q55497"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1991-04-04T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Jamie Lynn Spears"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q55524"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1643-01-01T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Marc-Antoine Charpentier"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q55600"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1983-03-21T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Outsider"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q55706"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1955-10-15T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Ewa B\u0142aszczyk"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q55736"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1960-05-25T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Majka Je\u017cowska"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q55785"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1951-10-09T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Ryszard Rynkowski"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q55796"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1921-04-16T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Peter Ustinov"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q55802"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Morgan Lacroix"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q56074"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1944-10-04T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Roc\u00edo D\u00farcal"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q56680"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1975-02-04T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Atilla Ta\u015f"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q56709"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1806-09-02T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Josef Gusikov"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q56816"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1986-07-10T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Psyco-M"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q56818"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1978-04-26T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Ours"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q57212"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1701-09-22T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Anna Magdalena Bach"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "female"
+    },
+    "category": {
+      "value": "singer"
+    }
+  },
+  {
+    "person": {
+      "type": "uri",
+      "value": "http://www.wikidata.org/entity/Q303"
+    },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "1935-01-08T00:00:00Z"
+    },
+    "personLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "Elvis Presley"
+    },
+    "genderLabel": {
+      "xml:lang": "en",
+      "type": "literal",
+      "value": "male"
+    },
+    "category": {
+      "value": "singer"
+    }
+  }
+]
