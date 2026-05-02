@@ -30,6 +30,27 @@ def build_features(person_data):
           features["age_over_50"] = 1 if age > 50 else 0
     return features
 
+#5/2 -- including decision trees in code 
+def best_question(dataset, questions):
+    max = -1
+    index = -1
+    len_data = len(dataset.items())
+
+    for q in range(len(questions)): 
+        count = 0 
+
+        for _, data in dataset.items():
+            if data.get(questions[q], 0) == 1: 
+                count += 1 
+
+            fraction = count/len_data
+
+            if ((fraction)*(1-fraction)) > max: 
+                max = (fraction)*(1-fraction)
+                index = q
+                
+    return questions[index]
+            
 def ask_question(dataset, question, answer):
     filtered = {}
     for name, data in dataset.items():
@@ -50,21 +71,29 @@ current_dataset = full_feature_dataset.copy()
 
 questions = ["is_male", "is_actor", "is_singer", "is_athlete", "age_under_30", "age_30_to_50","age_over_50"]
 
-for q in questions:
-    user_input = input(f"{q.replace('_', ' ').capitalize()}? (y/n): ").strip().lower()
-    answer = 1 if user_input == "y" else 0
-    current_dataset = ask_question(current_dataset, q, answer)
+questions_remain = questions.copy()
 
+person_found = False
+while (len(questions_remain) > 0):
+    to_ask = best_question(current_dataset, questions_remain)
+    user_input = input(f"{to_ask.replace('_', ' ').capitalize()}? (y/n): ").strip().lower()
+    answer = 1 if user_input == "y" else 0
+    current_dataset = ask_question(current_dataset, to_ask, answer)
+    
     if len(current_dataset) == 1:
+        person_found = True
         print("I think your person is:", list(current_dataset.keys())[0])
         break
+
     elif len(current_dataset) == 0:
         print("Hmm, I couldn't find anyone matching those answers.")
         break
+if (not person_found):
+    print("Your person is one of the following names")
 
-for person,data in current_dataset.items():
-    q = "is " + str(person)
-    user_input = input(f"{q.replace('_', ' ').capitalize()}? (y/n): ").strip().lower()
+    for person,data in current_dataset.items():
+        q = "is " + str(person)
+        user_input = input(f"{q.replace('_', ' ').capitalize()}? (y/n): ").strip().lower()
 
-    if user_input == 'y':
-      print("I think your person is: " + str(person))
+        if user_input == 'y':
+            print("I think your person is: " + str(person))
