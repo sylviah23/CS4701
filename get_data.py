@@ -4,42 +4,86 @@ import json
 URL = "https://query.wikidata.org/sparql"
 
 ACTOR_QUERY = """
-SELECT ?person ?personLabel ?genderLabel ?birthDate WHERE {
+SELECT ?person ?personLabel ?genderLabel ?birthDate ?sitelinks WHERE {
   ?person wdt:P31 wd:Q5.
   ?person wdt:P106 wd:Q33999.  # actor
   OPTIONAL { ?person wdt:P21 ?gender. }
   OPTIONAL { ?person wdt:P569 ?birthDate. }
+
+  ?person wikibase:sitelinks ?sitelinks.
+  FILTER(?sitelinks > 100)
+
   SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
 }
-LIMIT 100
+LIMIT 200
 """
 
 ATHLETE_QUERY = """
-SELECT ?person ?personLabel ?genderLabel ?birthDate WHERE {
+SELECT ?person ?personLabel ?genderLabel ?birthDate ?sitelinks WHERE {
   ?person wdt:P31 wd:Q5.
   ?person wdt:P106 wd:Q2066131.  # athlete
   OPTIONAL { ?person wdt:P21 ?gender. }
   OPTIONAL { ?person wdt:P569 ?birthDate. }
+  
+  ?person wikibase:sitelinks ?sitelinks.
+  FILTER(?sitelinks > 50)
+
   SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
 }
-LIMIT 100
+LIMIT 200
 """
 
 SINGER_QUERY = """
-SELECT ?person ?personLabel ?genderLabel ?birthDate WHERE {
+SELECT ?person ?personLabel ?genderLabel ?birthDate ?sitelinks WHERE {
   ?person wdt:P31 wd:Q5.
   ?person wdt:P106 wd:Q177220.  # singer
   OPTIONAL { ?person wdt:P21 ?gender. }
   OPTIONAL { ?person wdt:P569 ?birthDate. }
+  
+  ?person wikibase:sitelinks ?sitelinks.
+  FILTER(?sitelinks > 50)
+
   SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
 }
-LIMIT 100
+LIMIT 200
+"""
+
+POLITICIAN_QUERY = """
+SELECT ?person ?personLabel ?genderLabel ?birthDate ?sitelinks WHERE {
+  ?person wdt:P31 wd:Q5.
+  ?person wdt:P106 wd:Q82955.  # politician
+  OPTIONAL { ?person wdt:P21 ?gender. }
+  OPTIONAL { ?person wdt:P569 ?birthDate. }
+  
+  ?person wikibase:sitelinks ?sitelinks.
+  FILTER(?sitelinks > 50)
+
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+}
+LIMIT 200
+"""
+
+SCIENTIST_QUERY = """
+SELECT ?person ?personLabel ?genderLabel ?birthDate ?sitelinks WHERE {
+  ?person wdt:P31 wd:Q5.
+  ?person wdt:P106 wd:Q901.  # scientist
+  OPTIONAL { ?person wdt:P21 ?gender. }
+  OPTIONAL { ?person wdt:P569 ?birthDate. }
+
+  ?person wikibase:sitelinks ?sitelinks.
+  FILTER(?sitelinks > 50)
+
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+}
+LIMIT 200
 """
 
 QUERIES = {
     "actor": ACTOR_QUERY,
     "athlete": ATHLETE_QUERY,
-    "singer": SINGER_QUERY
+    "singer": SINGER_QUERY,
+    "politician": POLITICIAN_QUERY,
+    "scientist": SCIENTIST_QUERY
 }
 
 def fetch_data():
