@@ -4,7 +4,7 @@ import json
 URL = "https://query.wikidata.org/sparql"
 
 ACTOR_QUERY = """
-SELECT ?person ?personLabel ?genderLabel ?birthDate ?sitelinks ?occupationLabel WHERE {
+SELECT ?person ?personLabel ?genderLabel ?birthDate ?sitelinks WHERE {
   ?person wdt:P31 wd:Q5.
   ?person wdt:P106 wd:Q33999.  # actor
   OPTIONAL { ?person wdt:P21 ?gender. }
