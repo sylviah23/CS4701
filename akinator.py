@@ -1,4 +1,5 @@
 import json
+import get_data
 
 CURRENT_YEAR = 2026
 
@@ -11,14 +12,52 @@ def get_age(birthday):
     except:
         return None
 
+def country_to_continent(region): 
+    if region in ["United States", "Canada", "Mexico"]:
+        return "North America"
+
+    elif region in ["United Kingdom", "France", "Germany", "Italy", "Spain", "Russia"]:
+        return "Europe"
+
+    elif region in ["China", "Japan", "India", "South Korea"]:
+        return "Asia"
+
+    elif region in ["Brazil", "Argentina", "Chile"]:
+        return "South America"
+
+    elif region in ["Nigeria", "South Africa", "Egypt"]:
+        return "Africa"
+    
+    elif region in ["Australia"]:
+        return "Australia"
+
+    else:
+        return "Other"
+    
+def nationality_buckets(person_data):
+    region = person_data["nationality"]["value"]
+    if region == None: 
+        return None 
+    else: 
+        return country_to_continent(region)
+
+def birth_place_buckets(person_data):
+    region = person_data["birthCountry"]["value"]
+    if region == None: 
+        return None 
+    else: 
+        return country_to_continent(region)
+
 def build_features(person_data):
     features = {}
     if person_data["genderLabel"]["value"] == "male":
         features["is_male"] = 1
+        features["is_female"] = 0
     elif person_data["genderLabel"]["value"] == "female":
         features["is_female"] = 1
+        features["is_male"] = 0
     
-    for category in ["actor", "athlete", "singer"]:
+    for category in ["actor", "athlete", "singer", "politician", "scientist"]:
         features[f"is_{category}"] = 1 if category in person_data["category"]["value"] else 0
     
     birthday = person_data.get("birthDate")
@@ -30,7 +69,19 @@ def build_features(person_data):
           features["age_over_50"] = 1 if age > 50 else 0
     return features
 
-#5/2 -- including decision trees in code 
+def build_secondary_features(person_data):
+    features = {}
+    for country in ["North America", "South America", "Europe", "Africa", "Asia", "Australia"]:
+        features["from_{country}"] = 1 if nationality_buckets(person_data) == country else 0
+    
+    for country in ["North America", "South America", "Europe", "Africa", "Asia", "Australia"]:
+        features["born_in_{country}"] = 1 if birth_place_buckets(person_data) == country else 0
+    
+    
+    
+
+    
+
 def best_question(dataset, questions):
     max = -1
     index = -1
