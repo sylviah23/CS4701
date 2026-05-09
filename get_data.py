@@ -88,7 +88,8 @@ QUERIES = {
 
 def fetch_data():
     headers = {
-        "User-Agent": "CS4701AkinatorBot"
+        "User-Agent": "CS4701AkinatorBot",
+        "Accept": "application/sparql-results+json"
     }
 
     all_data = []
@@ -155,6 +156,7 @@ def get_secondary_features(dataset):
         if category == "actor":
             feature_blocks.append("?person wdt:P106 ?occupation.")
             feature_blocks.append("?person wdt:P136 ?genre.")
+            feature_blocks.append("?person wdt:P166 ?award.")
 
         elif category == "athlete":
             feature_blocks.append("?person wdt:P641 ?sport.")
@@ -165,6 +167,7 @@ def get_secondary_features(dataset):
             feature_blocks.append("?person wdt:P136 ?genre.")
             feature_blocks.append("?person wdt:P264 ?recordLabel.")
             feature_blocks.append("?person wdt:P1303 ?instrument.")
+            feature_blocks.append("?person wdt:P166 ?award.")
 
         elif category == "politician":
             feature_blocks.append("?person wdt:P39 ?positionHeld.")
@@ -177,7 +180,19 @@ def get_secondary_features(dataset):
     feature_block = "\n      OPTIONAL { " + " }\n      OPTIONAL { ".join(feature_blocks) + " }"
 
     return f"""
-    SELECT ?person ?nationality ?birthCountry ?sport ?genre ?award ?team ?recordLabel ?instrument ?field ?educatedAt WHERE {{
+    SELECT 
+      ?person 
+      ?nationality 
+      ?birthCountry 
+      (GROUP_CONCAT(DISTINCT ?occupationLabel; separator=",") AS ?occupations)
+      (GROUP_CONCAT(DISTINCT ?awardLabel; separator=",") AS ?awards)
+      (GROUP_CONCAT(DISTINCT ?sportLabel; separator=",") AS ?sports)
+      (GROUP_CONCAT(DISTINCT ?genreLabel; separator=",") AS ?genres)
+      (GROUP_CONCAT(DISTINCT ?teamLabel; separator=",") AS ?teams)
+      (GROUP_CONCAT(DISTINCT ?instrumentLabel; separator=",") AS ?instruments)
+      (GROUP_CONCAT(DISTINCT ?fieldLabel; separator=",") AS ?fields)
+      (GROUP_CONCAT(DISTINCT ?educatedAtLabel; separator=",") AS ?schools)
+       WHERE {{
 
       VALUES ?person {{
         {values}

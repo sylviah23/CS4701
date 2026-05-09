@@ -12,9 +12,10 @@ def get_age(birthday):
     except:
         return None
 
+#maybe fade this and use the country_continent package pycountry-convert 
 def country_to_continent(region): 
     if region in ["United States", "Canada", "Mexico"]:
-        return "North America"
+        return "North_America"
 
     elif region in ["United Kingdom", "France", "Germany", "Italy", "Spain", "Russia"]:
         return "Europe"
@@ -23,7 +24,7 @@ def country_to_continent(region):
         return "Asia"
 
     elif region in ["Brazil", "Argentina", "Chile"]:
-        return "South America"
+        return "South_America"
 
     elif region in ["Nigeria", "South Africa", "Egypt"]:
         return "Africa"
@@ -47,6 +48,129 @@ def birth_place_buckets(person_data):
         return None 
     else: 
         return country_to_continent(region)
+
+def awards_buckets(person_data):
+    if person_data["awards"]["value"] == None: 
+        return None 
+    awards = set(person_data["awards"]["value"].split(","))
+    to_ret = set()
+    for x in awards: 
+        
+        if "Emmy" in x: 
+            to_ret.add("Emmy")
+        if "Tony" in x: 
+            to_ret.add("Tony")
+        if "Oscar" in x: 
+            to_ret.add("Oscar")
+        if "Grammy" in x: 
+            to_ret.add("Grammy")
+        #Non-entertainment awards are likely to only win one of all awards 
+        elif "Nobel" in x: 
+            to_ret.add("Nobel")
+            break
+        elif "Olympic" in x: 
+            to_ret.add("Olympic")
+            break 
+        
+        elif "Pulitzer" in x: 
+            to_ret.add("Pulitzer")
+            break 
+
+    return list(to_ret) 
+
+def sports_buckets(person_data):
+    if person_data["sports"]["value"] == None: 
+        return None 
+    sports = set(person_data["sports"]["value"].split(","))
+    to_ret = set()
+    #chat has given me this data set, to do: query atheletes and see sports outputs, 
+    #edit the dataset accordingly 
+    SPORT_BUCKETS = {
+    "team_sports": {
+        "association football",
+        "basketball",
+        "baseball",
+        "american football",
+        "cricket",
+        "hockey",
+        "rugby"
+    },
+
+    "combat_sports": {
+        "boxing",
+        "mixed martial arts",
+        "wrestling",
+        "judo",
+        "karate"
+    },
+
+    "racing_sports": {
+        "formula one",
+        "nascar",
+        "motorcycle racing",
+        "rallying"
+    },
+
+    "water_sports": {
+        "swimming",
+        "diving",
+        "surfing",
+        "water polo"
+    },
+
+    "winter_sports": {
+        "skiing",
+        "snowboarding",
+        "figure skating",
+        "ice hockey"
+    },
+
+    "track_and_field": {
+        "running",
+        "marathon",
+        "pole vault"
+    },
+
+    "racket_sports": {
+        "tennis",
+        "badminton",
+        "table tennis",
+        "squash"
+    },
+
+    "strength_precision": {
+        "golf",
+        "archery",
+        "shooting sport",
+        "weightlifting"
+    },
+
+    "extreme_sports": {
+        "skateboarding",
+        "bmx",
+        "rock climbing"
+    }
+}
+  
+    for sport in sports: 
+
+        sport = sport.lower()
+        for bucket, words in SPORT_BUCKETS.items():
+            for word in words: 
+                if word in sport: 
+                    to_ret.add(bucket)
+                    break 
+
+    return list(to_ret)
+
+
+#no bucket building can be abstracted
+# def build_no_buckets(trait, person_data, features):
+#     traits = None
+#     if person_data[f"{trait}"]["value"] != None: 
+#         traits = set(person_data[f"{trait}"]["value"].split(","))
+#     for x in traits 
+
 
 def build_features(person_data):
     features = {}
@@ -72,12 +196,35 @@ def build_features(person_data):
 def build_secondary_features(person_data):
     features = {}
     for country in ["North America", "South America", "Europe", "Africa", "Asia", "Australia"]:
-        features["from_{country}"] = 1 if nationality_buckets(person_data) == country else 0
+        if nationality_buckets(person_data) == country:
+            features[f"from_{country}"] = 1 
     
     for country in ["North America", "South America", "Europe", "Africa", "Asia", "Australia"]:
-        features["born_in_{country}"] = 1 if birth_place_buckets(person_data) == country else 0
-    
-    
+         if birth_place_buckets(person_data) == country:
+            features[f"born_in_{country}"] = 1
+    #occupation build here 
+    # occupations = set(person_data.get("occupations", {}).get("value", "").split(",")) - {""}
+    #awards build -- if you think of others please add 
+    if person_data["category"]["value"] != "politician":
+        for award in ["Grammy", "Tony", "Emmy", "Nobel", "Oscar", "Olympic", "Pulitzer"]:
+            awards = awards_buckets(person_data)
+            if award in awards: 
+                features[f"{award}_won"] = 1
+
+    if person_data["category"]["value"] == "athlete":
+        if person_data["sports"]["value"] != None: 
+            sports = set(person_data["sports"]["value"].split(","))
+            for x in sports: 
+                #Is this too specific and shld only be stored when the sport bucket questions are asked?
+                features[f"play_{x}"] = 1
+            for bucket in sports_buckets(person_data): 
+                features[f"sport_type_{bucket}"] = 1
+
+    #need to check singer category 
+    if person_data["instruments"]["value"] != None: 
+        instruments = set(person_data["instruments"]["value"].split(","))
+        for x in instruments: 
+            features[f"play_{x}"] = 1
     
 
     
