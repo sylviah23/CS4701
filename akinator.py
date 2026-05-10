@@ -1,5 +1,8 @@
 import json
 import get_data
+import questions_bank
+from pycountry_convert import country_alpha2_to_continent_code
+import pycountry
 
 CURRENT_YEAR = 2026
 
@@ -12,36 +15,29 @@ def get_age(birthday):
     except:
         return None
 
-#maybe fade this and use the country_continent package pycountry-convert 
-def country_to_continent(region): 
-    if region in ["United States", "Canada", "Mexico"]:
-        return "North_America"
+def country_to_continent(region):
+    try:
+        country = pycountry.countries.lookup(region)
+        code = country_alpha2_to_continent_code(country.alpha_2)
+    except:
+        return None
 
-    elif region in ["United Kingdom", "France", "Germany", "Italy", "Spain", "Russia", "Albania"]:
-        return "Europe"
+    mapping = {
+        "NA": "North_America",
+        "EU": "Europe",
+        "AS": "Asia",
+        "SA": "South_America",
+        "AF": "Africa",
+        "OC": "Australia"
+    }
 
-    elif region in ["China", "Japan", "India", "South Korea"]:
-        return "Asia"
-
-    elif region in ["Brazil", "Argentina", "Chile", "Colombia"]:
-        return "South_America"
-
-    elif region in ["Nigeria", "South Africa", "Egypt"]:
-        return "Africa"
-    
-    elif region in ["Australia", "New Zealand"]:
-        return "Australia"
-
-    else:
-        return "Other"
+    return mapping[code]
     
 def nationality_buckets(nationalities_string):
     if nationalities_string == None: 
         return None 
     countries = [c.strip() for c in nationalities_string.split(",")]
-
     continents = [country_to_continent(c) for c in countries]
-
     return max(set(continents), key=continents.count)
 
 def birth_place_buckets(person_data):
@@ -180,11 +176,11 @@ def build_nationality_trial(person_data, features):
         return features
     
     real_nat = nationality_buckets(nationality)
-    for country in ["North_America", "South_America", "Europe", "Africa", "Asia", "Australia"]:
-        if real_nat == country:
-            features[f"from_{country}"] = 1
+    for continent in ["North_America", "South_America", "Europe", "Africa", "Asia", "Australia"]:
+        if real_nat == continent:
+            features[f"from_{continent}"] = 1
         else: 
-            features[f"from_{country}"] = 0 #not sure if this needs to be stored tbh
+            features[f"from_{continent}"] = 0 #not sure if this needs to be stored tbh
     return features 
 
 def build_features(person_data):
@@ -210,7 +206,6 @@ def build_features(person_data):
           features["age_30_to_50"] = 1 if 30 <= age <= 50 else 0
           features["age_over_50"] = 1 if age > 50 else 0
     return features
-
 
 
 def build_secondary_features(person_data):
@@ -247,8 +242,6 @@ def build_secondary_features(person_data):
             features[f"play_{x}"] = 1
     
 
-    
-
 def best_question(dataset, questions):
     max = -1
     index = -1
@@ -276,60 +269,76 @@ def ask_question(dataset, question, answer):
             filtered[name] = data
     return filtered
 
-with open("people.json","r") as f:
-    people = json.load(f)
+def remove_question_category(questions_remain,to_ask):
+    for category in questions_bank.QUESTION_CATEGORIES:
+        if to_ask in category:
+            for q in category:
+                if q in questions_remain:
+                    questions_remain.remove(q)
+    return questions_remain
 
-full_feature_dataset = {}
-for person in people:
-    name = person.get("personLabel").get("value")
-    if name:
-        full_feature_dataset[name] = build_features(person)
-
-current_dataset = full_feature_dataset.copy() 
-
-questions = ["is_male", "is_actor", "is_singer", "is_athlete", "is_politician", "is_scientist","age_under_30", "age_30_to_50","age_over_50"]
-secondary_questions = ["from_North_America", "from_South_America", "from_Europe", "from_Africa", "from_Asia", "from_Australia"]
-
-questions_remain = questions.copy()
-
-person_found = False
-nationalities_added = False 
-while (len(questions_remain) > 0):
-    to_ask = best_question(current_dataset, questions_remain)
-    user_input = input(f"{to_ask.replace('_', ' ').capitalize()}? (y/n): ").strip().lower()
-    answer = 1 if user_input == "y" else 0
-    current_dataset = ask_question(current_dataset, to_ask, answer)
-    if len(current_dataset) < 10: 
-        for x in current_dataset: 
-            print(x)
-    questions_remain.remove(to_ask)
-    
-    if len(current_dataset) <= 100 and not nationalities_added:
-        print(len(current_dataset))
-        print("thinking...")
-        new_data = get_data.get_nationality_trial(current_dataset)
-        for person in current_dataset: 
-            qid = current_dataset[person]["qid"]
-            current_dataset[person] = build_nationality_trial(new_data[qid], current_dataset[person])
-            
-
-        questions_remain.extend(secondary_questions)
-        nationalities_added = True
-
-    if len(current_dataset) == 1:
-        person_found = True
-        print("I think your person is:", list(current_dataset.keys())[0])
-        break
-
-    elif len(current_dataset) == 0:
-        print("Hmm, I couldn't find anyone matching those answers.")
-        break
-if (not person_found):
-    print("Your person is one of the following names")
-
-    for person,data in current_dataset.items():
+# goes down the list of the remaining people in the dataset and asks user if
+# answer is each person on the list.
+# returns: True if person was found correctly, False if not
+def ask_individuals(current_dataset):
+    person_found = False
+    for person,_ in current_dataset.items():
         q = "is " + str(person)
         user_input = input(f"{q.replace('_', ' ').capitalize()}? (y/n): ").strip().lower()
 
         if user_input == 'y':
             print("I think your person is: " + str(person))
+            person_found = True
+            break
+    return person_found
+
+with open("people.json","r") as f:
+    people = json.load(f)
+
+# builds all initial features (gender, occupation, age)
+def build_initial_features():
+    full_feature_dataset = {}
+    for person in people:
+        name = person.get("personLabel").get("value")
+        if name:
+            full_feature_dataset[name] = build_features(person)
+    return full_feature_dataset
+
+if __name__ == "__main__":
+    current_dataset = build_initial_features()
+    questions_all = questions_bank.ALL_QUESTIONS_INITIAL
+    questions_remain = questions_all.copy()
+
+    person_found = False
+    nationalities_added = False 
+    while (len(questions_remain) > 0):
+        to_ask = best_question(current_dataset, questions_remain)
+        user_input = input(f"{to_ask.replace('_', ' ').capitalize()}? (y/n): ").strip().lower()
+        answer = 1 if user_input == "y" else 0
+        current_dataset = ask_question(current_dataset, to_ask, answer)
+        if user_input == "y":
+            questions_remain = remove_question_category(questions_remain,to_ask)
+        else:
+            questions_remain.remove(to_ask)
+
+        # add nationality questions if <= 100 left in dataset
+        if len(current_dataset) <= 100 and not nationalities_added:
+            print("thinking...")
+            new_data = get_data.get_nationality_trial(current_dataset)
+            for person in current_dataset: 
+                qid = current_dataset[person]["qid"]
+                current_dataset[person] = build_nationality_trial(new_data[qid], current_dataset[person])
+                
+            questions_remain.extend(questions_bank.NATIONALITY_QUESTIONS)
+            nationalities_added = True
+
+        # dataset only has 1 or 0 people, break and ask for it directly below or
+        # say you can't find it
+        if len(current_dataset) <= 1:
+            break
+
+    if (not person_found):
+        person_found = ask_individuals(current_dataset)
+
+    if (not person_found):
+        print("Hmm, I couldn't find anyone matching those answers.")

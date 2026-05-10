@@ -180,7 +180,7 @@ def secondary_trial_nat(dataset):
 
 def get_nationality_trial(dataset):
     headers = {
-        "User-Agent": "CS4701AkinatorBot",
+        "User-Agent": "CS4701AkinatorBot/1.0",
         "Accept": "application/sparql-results+json"
     }
 
@@ -188,9 +188,9 @@ def get_nationality_trial(dataset):
     if query is None:
         return None
 
-    response = requests.get(
+    response = requests.post(
         URL,
-        params={"query": query, "format": "json"},
+        data={"query": query, "format": "json"},
         headers=headers
     )
 
