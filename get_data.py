@@ -1,5 +1,6 @@
 import requests
 import json
+from collections import defaultdict
 
 URL = "https://query.wikidata.org/sparql"
 
@@ -9,7 +10,7 @@ SELECT ?person ?personLabel ?genderLabel ?birthDate ?sitelinks WHERE {
   ?person wdt:P106 wd:Q33999.  # actor
   OPTIONAL { ?person wdt:P21 ?gender. }
   OPTIONAL { ?person wdt:P569 ?birthDate. }
-
+  
   ?person wikibase:sitelinks ?sitelinks.
   FILTER(?sitelinks > 100)
 
@@ -60,7 +61,7 @@ SELECT ?person ?personLabel ?genderLabel ?birthDate ?sitelinks WHERE {
 
   SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
 }
-LIMIT 200
+LIMIT 75
 """
 
 SCIENTIST_QUERY = """
@@ -75,7 +76,7 @@ SELECT ?person ?personLabel ?genderLabel ?birthDate ?sitelinks WHERE {
 
   SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
 }
-LIMIT 200
+LIMIT 75
 """
 
 QUERIES = {
@@ -96,11 +97,14 @@ def fetch_data():
 
     for category, query in QUERIES.items():
       print(f"Fetching {category}s...")
+     
+      
       response = requests.get(
           URL,
           params={"query": query, "format": "json"},
           headers=headers
-      )
+        )
+        
 
       response.raise_for_status()
       data = response.json()
@@ -126,14 +130,75 @@ def extract_qid(dataset):
    to_ret = {}
 
    for _, data in dataset.items(): 
-      url = data["person"]["value"]
-      qid = url.split("/")[-1]
+      qid = data.get("qid")
 
-      category = data.get("category", {}).get("value")
 
-      to_ret[qid] = category 
-
+      for category in ["actor", "athlete", "singer", "politician", "scientist"]:
+        if data.get(f"is_{category}") == 1:
+           to_ret[qid] = category
+           break
+          
    return to_ret 
+
+# for category in ["actor", "athlete", "singer", "politician", "scientist"]:
+#          
+
+def group(query, feature):
+    group = defaultdict(set)
+
+    for person in query: 
+        name = person["person"]["value"].split("/")[-1]
+        if f"{feature}Label" in person:
+            extract = person[f"{feature}Label"]["value"]
+            group[name].add(extract)
+    
+    return {k: ",".join(sorted(v)) for k, v in group.items()}
+
+def secondary_trial_nat(dataset):
+    qids = extract_qid(dataset)
+
+    if len(qids) < 30 or len(qids) > 300:
+        return None
+
+    values = " ".join(f"wd:{qid}" for qid in qids)
+
+    query = f"""
+    SELECT ?person ?nationalityLabel WHERE {{
+      VALUES ?person {{
+        {values}
+      }}
+
+      ?person wdt:P27 ?nationality.
+
+      SERVICE wikibase:label {{
+        bd:serviceParam wikibase:language "en".
+      }}
+    }}
+    """
+    print("querying done")
+    return query
+
+def get_nationality_trial(dataset):
+    headers = {
+        "User-Agent": "CS4701AkinatorBot",
+        "Accept": "application/sparql-results+json"
+    }
+
+    query = secondary_trial_nat(dataset)
+    if query is None:
+        return None
+
+    response = requests.get(
+        URL,
+        params={"query": query, "format": "json"},
+        headers=headers
+    )
+
+    response.raise_for_status()
+    data = response.json()["results"]["bindings"]
+
+    print("about to group")
+    return group(data, "nationality")  
 
 def get_secondary_features(dataset):
 
