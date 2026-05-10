@@ -36,7 +36,7 @@ def country_to_continent(region):
 def nationality_buckets(nationalities_string):
     if nationalities_string == None: 
         return None 
-    countries = [c.strip() for c in nationalities_string.split(",")]
+    countries = [c.strip() for c in nationalities_string]
     continents = [country_to_continent(c) for c in countries]
     return max(set(continents), key=continents.count)
 
@@ -281,16 +281,15 @@ def remove_question_category(questions_remain,to_ask):
 # answer is each person on the list.
 # returns: True if person was found correctly, False if not
 def ask_individuals(current_dataset):
-    person_found = False
-    for person,_ in current_dataset.items():
-        q = "is " + str(person)
+    for qid, data in current_dataset.items():
+        name = data.get("name", qid)
+        q = f"is {name}"
         user_input = input(f"{q.replace('_', ' ').capitalize()}? (y/n): ").strip().lower()
-
         if user_input == 'y':
-            print("I think your person is: " + str(person))
-            person_found = True
-            break
-    return person_found
+            print("I think your person is: " + name)
+            return True
+
+    return False
 
 with open("people.json","r") as f:
     people = json.load(f)
@@ -300,8 +299,9 @@ def build_initial_features():
     full_feature_dataset = {}
     for person in people:
         name = person.get("personLabel").get("value")
-        if name:
-            full_feature_dataset[name] = build_features(person)
+        qid = person["person"]["value"].split("/")[-1]
+        full_feature_dataset[qid] = build_features(person)
+        full_feature_dataset[qid]["name"] = name
     return full_feature_dataset
 
 if __name__ == "__main__":
@@ -327,7 +327,10 @@ if __name__ == "__main__":
             new_data = get_data.get_nationality_trial(current_dataset)
             for person in current_dataset: 
                 qid = current_dataset[person]["qid"]
-                current_dataset[person] = build_nationality_trial(new_data[qid], current_dataset[person])
+                entity = new_data.get(qid)
+                if entity is None:
+                    continue
+                current_dataset[person] = build_nationality_trial(entity, current_dataset[person])
                 
             questions_remain.extend(questions_bank.NATIONALITY_QUESTIONS)
             nationalities_added = True

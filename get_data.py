@@ -143,62 +143,82 @@ def extract_qid(dataset):
 # for category in ["actor", "athlete", "singer", "politician", "scientist"]:
 #          
 
-def group(query, feature):
-    group = defaultdict(set)
+def chunk_list(lst, size):
+    for i in range(0, len(lst), size):
+        yield lst[i:i + size]
 
-    for person in query: 
-        name = person["person"]["value"].split("/")[-1]
-        if f"{feature}Label" in person:
-            extract = person[f"{feature}Label"]["value"]
-            group[name].add(extract)
-    
-    return {k: ",".join(sorted(v)) for k, v in group.items()}
 
-def secondary_trial_nat(dataset):
-    qids = extract_qid(dataset)
+def get_entity_data(qids):
+    headers = {
+        "User-Agent": "CS4701AkinatorBot/1.0"
+    }
+    url = "https://www.wikidata.org/w/api.php"
 
-    if len(qids) < 30 or len(qids) > 300:
-        return None
+    all_entities = {}
+    for batch in chunk_list(qids, 50):
+        ids = "|".join(batch)
 
-    values = " ".join(f"wd:{qid}" for qid in qids)
+        params = {
+            "action": "wbgetentities",
+            "ids": ids,
+            "format": "json",
+            "props": "claims|labels"
+        }
 
-    query = f"""
-    SELECT ?person ?nationalityLabel WHERE {{
-      VALUES ?person {{
-        {values}
-      }}
+        response = requests.get(
+            url,
+            params=params,
+            headers=headers,
+            timeout=30
+        )
 
-      ?person wdt:P27 ?nationality.
+        response.raise_for_status()
+        data = response.json()
+        if "entities" not in data:
+            continue
 
-      SERVICE wikibase:label {{
-        bd:serviceParam wikibase:language "en".
-      }}
-    }}
-    """
-    print("querying done")
-    return query
+        all_entities.update(data["entities"])
+
+    return all_entities
+
 
 def get_nationality_trial(dataset):
-    headers = {
-        "User-Agent": "CS4701AkinatorBot/1.0",
-        "Accept": "application/sparql-results+json"
-    }
+    person_qids = list(dataset.keys())
+    entities = get_entity_data(person_qids)
 
-    query = secondary_trial_nat(dataset)
-    if query is None:
-        return None
+    person_to_country_qids = defaultdict(list)
+    all_country_qids = set()
 
-    response = requests.post(
-        URL,
-        data={"query": query, "format": "json"},
-        headers=headers
-    )
+    for pid, entity in entities.items():
+        claims = entity.get("claims", {})
+        if "P27" not in claims:
+            continue
 
-    response.raise_for_status()
-    data = response.json()["results"]["bindings"]
+        for c in claims["P27"]:
+            try:
+                qid = c["mainsnak"]["datavalue"]["value"]["id"]
+                person_to_country_qids[pid].append(qid)
+                all_country_qids.add(qid)
+            except:
+                continue
 
-    print("about to group")
-    return group(data, "nationality")  
+    country_entities = get_entity_data(list(all_country_qids))
+    country_labels = {}
+
+    for qid, entity in country_entities.items():
+        label = entity.get("labels", {}).get("en", {}).get("value")
+        if label:
+            country_labels[qid] = label
+
+    result = {}
+    for pid, country_qids in person_to_country_qids.items():
+        labels = [
+            country_labels.get(q)
+            for q in country_qids
+            if country_labels.get(q)
+        ]
+        result[pid] = labels
+    return result
 
 def get_secondary_features(dataset):
 
