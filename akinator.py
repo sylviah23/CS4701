@@ -304,7 +304,7 @@ while (len(questions_remain) > 0):
             print(x)
     questions_remain.remove(to_ask)
     
-    if len(current_dataset) <= 75 and not nationalities_added:
+    if len(current_dataset) <= 100 and not nationalities_added:
         print(len(current_dataset))
         print("thinking...")
         new_data = get_data.get_nationality_trial(current_dataset)
