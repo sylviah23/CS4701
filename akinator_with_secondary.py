@@ -92,6 +92,15 @@ def build_award_features(person_data, features):
             features[award] = awards[award]
     return features
 
+def build_secondary_feature(person_data, all_features, new_feature):
+    feature = person_data.get(new_feature)
+    if feature is not None:
+        for f in feature:
+            all_features[f] = feature[f]
+    return all_features
+
+
+
 def build_features(person_data):
     features = {}
     qid = person_data["person"]["value"].split("/")[-1]
@@ -101,7 +110,11 @@ def build_features(person_data):
     features = build_age_features(person_data, features)
     features = build_nationality_features(person_data, features)
     features = build_occupation_features(person_data, features)
-    features = build_award_features(person_data, features)
+    features = build_secondary_feature(person_data, features,"award_features")
+    features = build_secondary_feature(person_data, features,"sport_features")
+    features = build_secondary_feature(person_data, features,"politician_features")
+    features = build_secondary_feature(person_data, features,"field_features")
+    features = build_secondary_feature(person_data, features,"instrument_features")
 
     return features
 
@@ -172,7 +185,7 @@ def ask_individuals(current_dataset):
     return False
 
 # builds all initial features (gender, occupation, age)
-def build_initial_features(people):
+def build_all_features(people):
     full_feature_dataset = {}
     for person in people:
         name = person.get("personLabel").get("value")
@@ -184,26 +197,23 @@ def build_initial_features(people):
 if __name__ == "__main__":
     with open("people_enriched.json","r") as f:
         people = json.load(f)
-    current_dataset = build_initial_features(people)
+    current_dataset = build_all_features(people)
     questions_all = questions_bank.ALL_QUESTIONS
     questions_remain = questions_all.copy()
 
     person_found = False
-    nationalities_added = False 
     while (len(questions_remain) > 0):
-        print(len(current_dataset))
         to_ask = best_question(current_dataset, questions_remain)
         user_input = input(f"{to_ask.replace('_', ' ').capitalize()}? (y/n): ").strip().lower()
         answer = 1 if user_input == "y" else 0
         current_dataset = ask_question(current_dataset, to_ask, answer)
-        if user_input == "y":
-            questions_remain = remove_question_category(questions_remain,to_ask)
-        else:
-            questions_remain.remove(to_ask)
+        # if user_input == "y":
+        #     questions_remain = remove_question_category(questions_remain,to_ask)
+        # else:
+        #     questions_remain.remove(to_ask)
         questions_remain = remove_null_questions(questions_remain, current_dataset)
         
-        # dataset only has 1 or 0 people, break and ask for it directly below or
-        # say you can't find it
+        # dataset only has 1 or 0 people, break and ask for it directly below or say you can't find it
         if len(current_dataset) <= 1:
             break
 
