@@ -218,6 +218,8 @@ def write_user_answer(json_entry):
         json.dump(data, file,indent=2)
 
 
+# this adds the user's person if their person is not already in the database and populates
+# features using the user's answers
 def add_user_answer(user_answer,question_answer_cache, birthday, nationality):
     json_entry = {  "person": {
                     "value": "Q0" 
