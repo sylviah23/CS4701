@@ -1,6 +1,5 @@
 GENDER_QUESTIONS = ["is_male"]
 
-
 OCCUPATION_QUESTIONS = ["is_actor", 
                         "is_singer", 
                         "is_athlete", 
@@ -21,5 +20,49 @@ NATIONALITY_QUESTIONS = ["from_North_America",
                          "from_Asia", 
                          "from_Australia"]
 
-ALL_QUESTIONS = GENDER_QUESTIONS + OCCUPATION_QUESTIONS + AGE_QUESIONS + NATIONALITY_QUESTIONS
-QUESTION_CATEGORIES = [GENDER_QUESTIONS, OCCUPATION_QUESTIONS, AGE_QUESIONS, NATIONALITY_QUESTIONS]
+SPORTS_QUESTIONS = ["plays_team_sport",
+                    "plays_racket_sport",
+                    "plays_combat_sport",
+                    "plays_racing_sport",
+                    "plays_water_sport",
+                    "plays_winter_sport",
+                    "plays_track_field",
+                    "plays_golf",
+                    "plays_gymnastics"
+                    ]
+
+AWARD_QUESTIONS = [
+                  "won_oscar",
+                  "won_emmy",
+                  "won_tony",
+                  "won_grammy",
+                  "won_nobel",
+                  "won_olympic"
+                  ]
+
+INSTRUMENT_QUESTIONS = [
+                        "plays_strings",
+                        "plays_keys",
+                        "plays_wind",
+                        "plays_percussion",
+                        "plays_vocals"
+                      ]
+
+POLITICIAN_QUESTIONS = [
+                        "is_president",
+                        "is_prime_minister",
+                        "is_senator_or_mp",
+                        "is_governor",
+                        "is_minister"
+                      ]
+
+SCIENTIST_QUESTIONS = [
+                      "field_physical_science",
+                      "field_life_science",
+                      "field_social_science",
+                      "field_computer_science"
+                      ]
+
+
+ALL_QUESTIONS = GENDER_QUESTIONS + OCCUPATION_QUESTIONS + AGE_QUESTIONS + NATIONALITY_QUESTIONS + SPORTS_QUESTIONS + AWARD_QUESTIONS + INSTRUMENT_QUESTIONS + POLITICIAN_QUESTIONS + SCIENTIST_QUESTIONS
+QUESTION_CATEGORIES = [GENDER_QUESTIONS, OCCUPATION_QUESTIONS, AGE_QUESTIONS, NATIONALITY_QUESTIONS, SPORTS_QUESTIONS, AWARD_QUESTIONS, INSTRUMENT_QUESTIONS, POLITICIAN_QUESTIONS, SCIENTIST_QUESTIONS]
