@@ -46182,5 +46182,146 @@
       "plays_percussion": 0,
       "plays_vocals": 1
     }
+  },
+  {
+    "person": {
+      "value": "Q0"
+    },
+    "personLabel": {
+      "value": "Benjamin Franklin"
+    },
+    "nationalities": [
+      "United States"
+    ],
+    "birthDate": {
+      "value": "1706-01-17"
+    },
+    "genderLabel": {
+      "value": "male"
+    },
+    "category": {
+      "value": "politician"
+    },
+    "position_features": {
+      "is_president": 0,
+      "is_senator_or_mp": 0,
+      "is_prime_minister": 0,
+      "is_governor": 0
+    }
+  },
+  {
+    "person": {
+      "value": "Q0"
+    },
+    "personLabel": {
+      "value": "Michelle Obama"
+    },
+    "nationalities": [
+      "United States"
+    ],
+    "birthDate": {
+      "value": "1964-01-17"
+    },
+    "genderLabel": {
+      "value": "female"
+    },
+    "category": {
+      "value": ""
+    }
+  },
+  {
+    "person": {
+      "value": "Q0"
+    },
+    "personLabel": {
+      "value": "Marie Curie"
+    },
+    "nationalities": [
+      "Poland"
+    ],
+    "birthDate": {
+      "value": "1867-11-07"
+    },
+    "genderLabel": {
+      "value": "female"
+    },
+    "category": {
+      "value": ""
+    },
+    "position_features": {
+      "is_minister": 0
+    }
+  },
+  {
+    "person": {
+      "value": "Q0"
+    },
+    "personLabel": {
+      "value": "Kyriakos Mitsotakis"
+    },
+    "nationalities": [
+      "Greece"
+    ],
+    "birthDate": {
+      "value": "1968-03-04"
+    },
+    "genderLabel": {
+      "value": "male"
+    },
+    "category": {
+      "value": "politician"
+    },
+    "position_features": {
+      "is_president": 0,
+      "is_senator_or_mp": 0,
+      "is_minister": 1,
+      "is_prime_minister": 1
+    }
+  },
+  {
+    "person": {
+      "value": "Q0"
+    },
+    "personLabel": {
+      "value": "Emmanuel Macron"
+    },
+    "nationalities": [
+      "France"
+    ],
+    "birthDate": {
+      "value": "1977-12-21"
+    },
+    "genderLabel": {
+      "value": "male"
+    },
+    "category": {
+      "value": "politician"
+    },
+    "position_features": {
+      "is_minister": 1,
+      "is_senator_or_mp": 0,
+      "is_prime_minister": 0,
+      "is_president": 1
+    }
+  },
+  {
+    "person": {
+      "value": "Q0"
+    },
+    "personLabel": {
+      "value": "Robert Downey Jr."
+    },
+    "nationalities": [
+      "United States"
+    ],
+    "birthDate": {
+      "value": "1965-04-04"
+    },
+    "genderLabel": {
+      "value": "male"
+    },
+    "category": {
+      "value": "actor"
+    }
   }
 ]
