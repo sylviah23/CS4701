@@ -14,6 +14,7 @@ def get_age(birthday):
     except:
         return None
 
+
 def country_to_continent(region):
     try:
         country = pycountry.countries.lookup(region)
@@ -29,15 +30,16 @@ def country_to_continent(region):
         "AF": "Africa",
         "OC": "Australia"
     }
-
     return mapping[code]
     
+
 def nationality_buckets(nationalities_string):
     if nationalities_string == None: 
         return None 
     countries = [c.strip() for c in nationalities_string]
     continents = [country_to_continent(c) for c in countries]
     return max(set(continents), key=continents.count)
+
 
 def birth_place_buckets(person_data):
     region = person_data["birthCountry"]["value"]
@@ -59,6 +61,7 @@ def build_gender_features(person_data, features):
         features["is_male"] = 0
     return features
 
+
 def build_age_features(person_data, features):
     birthday = person_data.get("birthDate")
     if birthday is not None:
@@ -68,6 +71,7 @@ def build_age_features(person_data, features):
           features["age_30_to_50"] = 1 if 30 <= age <= 50 else 0
           features["age_over_50"] = 1 if age > 50 else 0
     return features
+
 
 def build_nationality_features(person_data, features):
     nationality = person_data.get("nationalities")
@@ -80,10 +84,12 @@ def build_nationality_features(person_data, features):
                 features[f"from_{continent}"] = 0 #not sure if this needs to be stored tbh
     return features
 
+
 def build_occupation_features(person_data, features):
     for category in ["actor", "athlete", "singer", "politician", "scientist", "musician", "director", "author", "comedian"]:
         features[f"is_{category}"] = 1 if category in person_data["category"]["value"] else 0
     return features
+
 
 def build_award_features(person_data, features):
     awards = person_data.get("award_features")
@@ -92,13 +98,13 @@ def build_award_features(person_data, features):
             features[award] = awards[award]
     return features
 
+
 def build_secondary_feature(person_data, all_features, new_feature):
     feature = person_data.get(new_feature)
     if feature is not None:
         for f in feature:
             all_features[f] = feature[f]
     return all_features
-
 
 
 def build_features(person_data):
@@ -138,7 +144,8 @@ def best_question(dataset, questions):
                 index = q
                 
     return questions[index]
-            
+
+
 def ask_question(dataset, question, answer):
     filtered = {}
     for name, data in dataset.items():
@@ -147,6 +154,9 @@ def ask_question(dataset, question, answer):
     return filtered
 
 
+# this removes any questions that does not help the akinator. that is, if all the people
+# remaining would say "yes" to a question or all say "no", asking this question adds no
+# value and can be removed
 def remove_null_questions(questions, dataset):
     questions_to_remove = []
     for q in range(len(questions)): 
@@ -163,6 +173,7 @@ def remove_null_questions(questions, dataset):
         questions.remove(q)
     return questions
 
+
 # goes down the list of the remaining people in the dataset and asks user if
 # answer is each person on the list.
 # returns: True if person was found correctly, False if not
@@ -177,7 +188,7 @@ def ask_individuals(current_dataset):
 
     return False
 
-# builds all initial features (gender, occupation, age)
+
 def build_all_features(people):
     full_feature_dataset = {}
     for person in people:
@@ -186,6 +197,7 @@ def build_all_features(people):
         full_feature_dataset[qid] = build_features(person)
         full_feature_dataset[qid]["name"] = name
     return full_feature_dataset
+
 
 if __name__ == "__main__":
     with open("people_enriched.json","r") as f:
