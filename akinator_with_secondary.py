@@ -47,21 +47,19 @@ def birth_place_buckets(person_data):
         return country_to_continent(region)
 
 
-def build_features(person_data):
-    features = {}
-    qid = person_data["person"]["value"].split("/")[-1]
-    features["qid"] = qid
-
-    if person_data["genderLabel"]["value"] == "male":
+def build_gender_features(person_data, features):
+    gender = person_data.get("genderLabel")
+    if gender is None:
+        return features
+    if gender == "male":
         features["is_male"] = 1
         features["is_female"] = 0
-    elif person_data["genderLabel"]["value"] == "female":
+    elif gender == "female":
         features["is_female"] = 1
         features["is_male"] = 0
-    
-    for category in ["actor", "athlete", "singer", "politician", "scientist", "musician", "director", "author", "comedian"]:
-        features[f"is_{category}"] = 1 if category in person_data["category"]["value"] else 0
-    
+    return features
+
+def build_age_features(person_data, features):
     birthday = person_data.get("birthDate")
     if birthday is not None:
       age = get_age(birthday["value"])
@@ -69,16 +67,42 @@ def build_features(person_data):
           features["age_under_30"] = 1 if age < 30 else 0
           features["age_30_to_50"] = 1 if 30 <= age <= 50 else 0
           features["age_over_50"] = 1 if age > 50 else 0
-    
+    return features
+
+def build_nationality_features(person_data, features):
     nationality = person_data.get("nationalities")
     if nationality != []:
         real_nat = nationality_buckets(nationality)
-        print(nationality)
         for continent in ["North_America", "South_America", "Europe", "Africa", "Asia", "Australia"]:
             if real_nat == continent:
                 features[f"from_{continent}"] = 1
             else: 
                 features[f"from_{continent}"] = 0 #not sure if this needs to be stored tbh
+    return features
+
+def build_occupation_features(person_data, features):
+    for category in ["actor", "athlete", "singer", "politician", "scientist", "musician", "director", "author", "comedian"]:
+        features[f"is_{category}"] = 1 if category in person_data["category"]["value"] else 0
+    return features
+
+def build_award_features(person_data, features):
+    awards = person_data.get("award_features")
+    if awards is not None:
+        for award in awards:
+            features[award] = awards[award]
+    return features
+
+def build_features(person_data):
+    features = {}
+    qid = person_data["person"]["value"].split("/")[-1]
+    features["qid"] = qid
+
+    features = build_gender_features(person_data, features)
+    features = build_age_features(person_data, features)
+    features = build_nationality_features(person_data, features)
+    features = build_occupation_features(person_data, features)
+    features = build_award_features(person_data, features)
+
     return features
 
 
@@ -117,6 +141,22 @@ def remove_question_category(questions_remain,to_ask):
                     questions_remain.remove(q)
     return questions_remain
 
+def remove_null_questions(questions, dataset):
+    questions_to_remove = []
+    for q in range(len(questions)): 
+        count = 0 
+
+        for _, data in dataset.items():
+            if data.get(questions[q], 0) == 1: 
+                count += 1 
+
+        if count == 0 or count == len(dataset):
+            questions_to_remove.append(questions[q])
+                
+    for q in questions_to_remove:
+        questions.remove(q)
+    return questions
+
 # goes down the list of the remaining people in the dataset and asks user if
 # answer is each person on the list.
 # returns: True if person was found correctly, False if not
@@ -151,6 +191,7 @@ if __name__ == "__main__":
     person_found = False
     nationalities_added = False 
     while (len(questions_remain) > 0):
+        print(len(current_dataset))
         to_ask = best_question(current_dataset, questions_remain)
         user_input = input(f"{to_ask.replace('_', ' ').capitalize()}? (y/n): ").strip().lower()
         answer = 1 if user_input == "y" else 0
@@ -159,6 +200,7 @@ if __name__ == "__main__":
             questions_remain = remove_question_category(questions_remain,to_ask)
         else:
             questions_remain.remove(to_ask)
+        questions_remain = remove_null_questions(questions_remain, current_dataset)
         
         # dataset only has 1 or 0 people, break and ask for it directly below or
         # say you can't find it
