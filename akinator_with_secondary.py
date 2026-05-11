@@ -86,8 +86,10 @@ def build_nationality_features(person_data, features):
 
 
 def build_occupation_features(person_data, features):
-    for category in ["actor", "athlete", "singer", "politician", "scientist", "musician", "director", "author", "comedian"]:
-        features[f"is_{category}"] = 1 if category in person_data["category"]["value"] else 0
+    occupation = person_data.get("category")
+    if occupation is not None:
+        for category in ["actor", "athlete", "singer", "politician", "scientist", "musician", "director", "author", "comedian"]:
+            features[f"is_{category}"] = 1 if category in person_data["category"]["value"] else 0
     return features
 
 
@@ -109,16 +111,13 @@ def build_secondary_feature(person_data, all_features, new_feature):
 
 def build_features(person_data):
     features = {}
-    qid = person_data["person"]["value"].split("/")[-1]
-    features["qid"] = qid
-
     features = build_gender_features(person_data, features)
     features = build_age_features(person_data, features)
     features = build_nationality_features(person_data, features)
     features = build_occupation_features(person_data, features)
     features = build_secondary_feature(person_data, features,"award_features")
     features = build_secondary_feature(person_data, features,"sport_features")
-    features = build_secondary_feature(person_data, features,"politician_features")
+    features = build_secondary_feature(person_data, features,"position_features")
     features = build_secondary_feature(person_data, features,"field_features")
     features = build_secondary_feature(person_data, features,"instrument_features")
 
@@ -199,17 +198,75 @@ def build_all_features(people):
     return full_feature_dataset
 
 
+def add_secondary_data_user_answer(question, json_category, json_entry):
+    if json_category not in json_entry:
+        json_entry[json_category] = {}
+    if answer == "y":
+        json_entry[json_category][question] = 0
+    else:
+        json_entry[json_category][question] = 1
+    return json_entry
+    
+
+def write_user_answer(json_entry):
+    with open("people_enriched.json","r") as file:
+        data = json.load(file)
+    
+    data.append(json_entry)
+
+    with open('people_enriched.json', 'w') as file:
+        json.dump(data, file,indent=2)
+
+
+def add_user_answer(user_answer,question_answer_cache, birthday, nationality):
+    json_entry = {  "person": {
+                    "value": "Q0" 
+                    },
+                    "personLabel": {
+                    "value": user_answer
+                    },
+                    "nationalities": [
+                        nationality
+                    ],
+                    "birthDate": {
+                    "value": birthday
+                    }
+                }
+    for question, answer in question_answer_cache.items():
+        if question in questions_bank.GENDER_QUESTIONS:
+            if answer == "y":
+                json_entry["genderLabel"] = {"value": "male"}
+            else:
+                json_entry["genderLabel"] = {"value": "female"}
+        if question in questions_bank.OCCUPATION_QUESTIONS:
+            if answer == "y":
+                json_entry["category"] = {"value": question.split('_')[1]}
+        if question in questions_bank.SPORTS_QUESTIONS:
+            json_entry = add_secondary_data_user_answer(question, "sport_features", json_entry)
+        if question in questions_bank.AWARD_QUESTIONS:
+            json_entry = add_secondary_data_user_answer(question, "award_features", json_entry)
+        if question in questions_bank.INSTRUMENT_QUESTIONS:
+            json_entry = add_secondary_data_user_answer(question, "instrument_features", json_entry)
+        if question in questions_bank.POLITICIAN_QUESTIONS:
+            json_entry = add_secondary_data_user_answer(question, "position_features", json_entry)
+        if question in questions_bank.SCIENTIST_QUESTIONS:
+            json_entry = add_secondary_data_user_answer(question, "field_features", json_entry)
+
+    write_user_answer(json_entry)
+
+
 if __name__ == "__main__":
     with open("people_enriched.json","r") as f:
         people = json.load(f)
     current_dataset = build_all_features(people)
-    questions_all = questions_bank.ALL_QUESTIONS
-    questions_remain = questions_all.copy()
+    questions_remain = questions_bank.ALL_QUESTIONS
+    question_answer_cache = {} # store user's Q&A in case their person is not in dataset we can add them in at game over
 
     person_found = False
     while (len(questions_remain) > 0):
         to_ask = best_question(current_dataset, questions_remain)
         user_input = input(f"{to_ask.replace('_', ' ').capitalize()}? (y/n): ").strip().lower()
+        question_answer_cache[to_ask] = user_input
         answer = 1 if user_input == "y" else 0
         current_dataset = ask_question(current_dataset, to_ask, answer)
         questions_remain = remove_null_questions(questions_remain, current_dataset)
@@ -223,3 +280,8 @@ if __name__ == "__main__":
 
     if (not person_found):
         print("Hmm, I couldn't find anyone matching those answers.")
+        user_answer = input(f"Please input your person's name: ")
+        birthday = input(f"Please input their birthday in the format YYYY-MM-DD: ")
+        nationality = input(f"Please input their nationality (name of the country): ")
+        add_user_answer(user_answer,question_answer_cache, birthday, nationality)
+        
