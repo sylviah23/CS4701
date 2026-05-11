@@ -195,7 +195,7 @@ def build_features(person_data):
         features["is_female"] = 1
         features["is_male"] = 0
     
-    for category in ["actor", "athlete", "singer", "politician", "scientist"]:
+    for category in ["actor", "athlete", "singer", "politician", "scientist", "musician", "director", "author", "comedian"]:
         features[f"is_{category}"] = 1 if category in person_data["category"]["value"] else 0
     
     birthday = person_data.get("birthDate")

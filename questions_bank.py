@@ -1,12 +1,16 @@
 GENDER_QUESTIONS = ["is_male"]
 
+
 OCCUPATION_QUESTIONS = ["is_actor", 
                         "is_singer", 
                         "is_athlete", 
                         "is_politician", 
-                        "is_scientist"]
+                        "is_scientist",
+                        "is_director", 
+                        "is_author", 
+                        "is_comedian"]
 
-AGE_QUESIONS = ["age_under_30", 
+AGE_QUESTIONS = ["age_under_30", 
                 "age_30_to_50",
                 "age_over_50"]
 
