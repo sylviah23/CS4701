@@ -146,13 +146,6 @@ def ask_question(dataset, question, answer):
             filtered[name] = data
     return filtered
 
-def remove_question_category(questions_remain,to_ask):
-    for category in questions_bank.QUESTION_CATEGORIES:
-        if to_ask in category:
-            for q in category:
-                if q in questions_remain:
-                    questions_remain.remove(q)
-    return questions_remain
 
 def remove_null_questions(questions, dataset):
     questions_to_remove = []
@@ -207,10 +200,6 @@ if __name__ == "__main__":
         user_input = input(f"{to_ask.replace('_', ' ').capitalize()}? (y/n): ").strip().lower()
         answer = 1 if user_input == "y" else 0
         current_dataset = ask_question(current_dataset, to_ask, answer)
-        # if user_input == "y":
-        #     questions_remain = remove_question_category(questions_remain,to_ask)
-        # else:
-        #     questions_remain.remove(to_ask)
         questions_remain = remove_null_questions(questions_remain, current_dataset)
         
         # dataset only has 1 or 0 people, break and ask for it directly below or say you can't find it
