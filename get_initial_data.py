@@ -13,11 +13,11 @@ HEADERS = {
 BATCH_SIZE = 25
 
 OCCUPATION_QIDS = {
-    "actor":      "Q33999",
+    "politician": "Q82955",
+    "actor":      "Q33999",  
+    "scientist":  "Q901",
     "athlete":    "Q2066131",
     "singer":     "Q177220",
-    "politician": "Q82955",
-    "scientist":  "Q901",
     "musician":   "Q639669",
     "director":   "Q2526255",
     "author":     "Q36180",
@@ -111,7 +111,7 @@ def main():
     people, seen_qids = load_existing("people.json")
     print(f"Loaded {len(people)} existing people ({len(seen_qids)} unique QIDs)")
 
-    TARGET = 1500
+    TARGET = 4000
     total_added = 0
 
     for (category, gender, region) in FILTER_COMBOS:

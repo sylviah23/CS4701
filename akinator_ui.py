@@ -12,7 +12,7 @@ from rich.rule import Rule
 console = Console()
 CURRENT_YEAR = 2026
 
-# ── helpers (same logic as akinator_with_secondary.py) ──────────────────────
+# helpers
 
 def get_age(birthday):
     if not birthday:
@@ -70,8 +70,16 @@ def build_features(person_data):
             features[f"from_{continent}"] = 1 if real_nat == continent else 0
 
     category = person_data.get("category", {}).get("value", "")
-    for cat in ["actor","athlete","singer","politician","scientist","musician","director","author","comedian"]:
+    for cat in ["actor", "athlete", "singer", "politician", "scientist", "musician",
+                "director", "author", "comedian", "businessman", "entrepreneur",
+                "architect", "philosopher", "explorer", "inventor", "journalist",
+                "chef", "fashion_designer", "activist", "monarch", "military_leader",
+                "painter", "mathematician", "revolutionary", "theologian", "sculptor"]:
         features[f"is_{cat}"] = 1 if cat in category else 0
+
+    is_alive = person_data.get("is_alive")
+    if is_alive is not None:
+        features["is_alive"] = is_alive
 
     for key in ["award_features","sport_features","position_features","field_features","instrument_features"]:
         features = build_secondary_feature(person_data, features, key)
@@ -104,10 +112,11 @@ def remove_null_questions(questions, dataset):
     n = len(dataset)
     return [q for q in questions if 0 < sum(1 for d in dataset.values() if d.get(q, 0) == 1) < n]
 
-# ── UI helpers ───────────────────────────────────────────────────────────────
+# question labels 
 
 QUESTION_LABELS = {
     "is_male":             "Is your person male?",
+    "is_alive":            "Is your person still alive?",
     "age_under_30":        "Is your person under 30 years old?",
     "age_30_to_50":        "Is your person between 30 and 50 years old?",
     "age_over_50":         "Is your person over 50 years old?",
@@ -126,6 +135,23 @@ QUESTION_LABELS = {
     "is_director":         "Is your person a film director?",
     "is_author":           "Is your person an author or writer?",
     "is_comedian":         "Is your person a comedian?",
+    "is_businessman":      "Is your person a businessman?",
+    "is_entrepreneur":     "Is your person an entrepreneur?",
+    "is_architect":        "Is your person an architect?",
+    "is_philosopher":      "Is your person a philosopher?",
+    "is_explorer":         "Is your person an explorer?",
+    "is_inventor":         "Is your person an inventor?",
+    "is_journalist":       "Is your person a journalist?",
+    "is_chef":             "Is your person a chef?",
+    "is_fashion_designer": "Is your person a fashion designer?",
+    "is_activist":         "Is your person an activist?",
+    "is_monarch":          "Is your person a monarch (king/queen)?",
+    "is_military_leader":  "Is your person a military leader?",
+    "is_painter":          "Is your person a painter?",
+    "is_mathematician":    "Is your person a mathematician?",
+    "is_revolutionary":    "Is your person a revolutionary?",
+    "is_theologian":       "Is your person a theologian?",
+    "is_sculptor":         "Is your person a sculptor?",
     "won_oscar":           "Has your person won an Oscar?",
     "won_emmy":            "Has your person won an Emmy?",
     "won_tony":            "Has your person won a Tony Award?",
@@ -157,7 +183,7 @@ QUESTION_LABELS = {
     "field_computer_science": "Does your person work in computer science or engineering?",
 }
 
-def ask(question, remaining, total):
+def ask(question, remaining):
     label = QUESTION_LABELS.get(question, question.replace("_", " ").capitalize() + "?")
     console.print(f"\n[bold cyan]Q:[/bold cyan] {label}")
     console.print(f"[dim]({remaining} people remaining)[/dim]")
@@ -174,18 +200,21 @@ def add_user_answer(user_answer, question_answer_cache, birthday, nationality):
         "birthDate": {"value": birthday},
         "genderLabel": {"value": ""},
         "category": {"value": ""},
+        "is_alive": None,
     }
     for question, answer in question_answer_cache.items():
+        if question == "is_alive":
+            json_entry["is_alive"] = 1 if answer == "y" else 0
         if question == "is_male":
             json_entry["genderLabel"]["value"] = "male" if answer == "y" else "female"
         if question in questions_bank.OCCUPATION_QUESTIONS and answer == "y":
             json_entry["category"]["value"] = question.replace("is_", "")
         for feat_key, q_list in [
-            ("sport_features",    questions_bank.SPORTS_QUESTIONS),
-            ("award_features",    questions_bank.AWARD_QUESTIONS),
+            ("sport_features",      questions_bank.SPORTS_QUESTIONS),
+            ("award_features",      questions_bank.AWARD_QUESTIONS),
             ("instrument_features", questions_bank.INSTRUMENT_QUESTIONS),
-            ("position_features", questions_bank.POLITICIAN_QUESTIONS),
-            ("field_features",    questions_bank.SCIENTIST_QUESTIONS),
+            ("position_features",   questions_bank.POLITICIAN_QUESTIONS),
+            ("field_features",      questions_bank.SCIENTIST_QUESTIONS),
         ]:
             if question in q_list:
                 if feat_key not in json_entry:
@@ -199,7 +228,7 @@ def add_user_answer(user_answer, question_answer_cache, birthday, nationality):
         json.dump(data, f, indent=2)
     console.print(f"\n[green]✓ Added [bold]{user_answer}[/bold] to the database![/green]")
 
-# ── main game loop ───────────────────────────────────────────────────────────
+# main game loop
 
 def main():
     console.print(Panel.fit(
@@ -216,16 +245,15 @@ def main():
     current_dataset = build_all_features(people)
     questions_remain = questions_bank.ALL_QUESTIONS.copy()
     question_answer_cache = {}
-    total = len(current_dataset)
 
-    console.print(f"\n[dim]Database loaded: {total} people[/dim]")
+    console.print(f"\n[dim]Database loaded: {len(current_dataset)} people[/dim]")
     console.print(Rule(style="dim"))
 
     person_found = False
 
     while len(questions_remain) > 0 and len(current_dataset) > 1:
         to_ask = best_question(current_dataset, questions_remain)
-        user_input = ask(to_ask, len(current_dataset), total)
+        user_input = ask(to_ask, len(current_dataset))
         question_answer_cache[to_ask] = user_input
         answer = 1 if user_input == "y" else 0
         current_dataset = filter_dataset(current_dataset, to_ask, answer)

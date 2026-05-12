@@ -198,6 +198,15 @@ def extract_fields(entities):
     return field_map
 
 
+def extract_is_alive(entities):
+    """Returns a dict of qid -> 1 (alive) or 0 (dead) based on P570 (date of death)."""
+    result = {}
+    for qid, entity in entities.items():
+        claims = entity.get("claims", {})
+        result[qid] = 0 if "P570" in claims else 1
+    return result
+
+
 # Bucketing functions (QID label -> feature bucket)
 
 AWARD_BUCKETS = {
@@ -258,10 +267,15 @@ def bucket_labels(labels, bucket_map):
 
 
 def enrich_people(people, nationality_map, award_buckets_map, sport_buckets_map,
-                  instrument_buckets_map, position_buckets_map, field_buckets_map):
+                  instrument_buckets_map, position_buckets_map, field_buckets_map,
+                  is_alive_map):
     for person in people:
         qid = extract_qid(person)
         category = person.get("category", {}).get("value", "")
+
+        # is_alive — use value from people.json if already set, else use P570 check
+        if "is_alive" not in person:
+            person["is_alive"] = is_alive_map.get(qid, None)
 
         # Nationality (all categories)
         person["nationalities"] = nationality_map.get(qid, [])
@@ -380,6 +394,11 @@ def main():
         for qid, qids in field_map_qid.items()
     }
 
+    # is_alive
+    print("\nExtracting alive/dead status...")
+    is_alive_map = extract_is_alive(entities)
+    print(f"  Alive: {sum(v for v in is_alive_map.values())} | Dead: {sum(1-v for v in is_alive_map.values())}")
+
     # Enrich and save
     print("\nEnriching dataset...")
     enriched = enrich_people(
@@ -390,6 +409,7 @@ def main():
         instrument_buckets_map,
         position_buckets_map,
         field_buckets_map,
+        is_alive_map,
     )
 
     with open("people_enriched.json", "w", encoding="utf-8") as f:

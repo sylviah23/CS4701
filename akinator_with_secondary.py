@@ -88,7 +88,11 @@ def build_nationality_features(person_data, features):
 def build_occupation_features(person_data, features):
     occupation = person_data.get("category")
     if occupation is not None:
-        for category in ["actor", "athlete", "singer", "politician", "scientist", "musician", "director", "author", "comedian"]:
+        for category in ["actor", "athlete", "singer", "politician", "scientist", "musician",
+                         "director", "author", "comedian", "businessman", "entrepreneur",
+                         "architect", "philosopher", "explorer", "inventor", "journalist",
+                         "chef", "fashion_designer", "activist", "monarch", "military_leader",
+                         "painter", "mathematician", "revolutionary", "theologian", "sculptor"]:
             features[f"is_{category}"] = 1 if category in person_data["category"]["value"] else 0
     return features
 
@@ -115,11 +119,16 @@ def build_features(person_data):
     features = build_age_features(person_data, features)
     features = build_nationality_features(person_data, features)
     features = build_occupation_features(person_data, features)
-    features = build_secondary_feature(person_data, features,"award_features")
-    features = build_secondary_feature(person_data, features,"sport_features")
-    features = build_secondary_feature(person_data, features,"position_features")
-    features = build_secondary_feature(person_data, features,"field_features")
-    features = build_secondary_feature(person_data, features,"instrument_features")
+    features = build_secondary_feature(person_data, features, "award_features")
+    features = build_secondary_feature(person_data, features, "sport_features")
+    features = build_secondary_feature(person_data, features, "position_features")
+    features = build_secondary_feature(person_data, features, "field_features")
+    features = build_secondary_feature(person_data, features, "instrument_features")
+
+    # is_alive
+    is_alive = person_data.get("is_alive")
+    if is_alive is not None:
+        features["is_alive"] = is_alive
 
     return features
 
@@ -286,4 +295,3 @@ if __name__ == "__main__":
         birthday = input(f"Please input their birthday in the format YYYY-MM-DD: ")
         nationality = input(f"Please input their nationality (name of the country): ")
         add_user_answer(user_answer,question_answer_cache, birthday, nationality)
-        
