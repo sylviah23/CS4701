@@ -183,23 +183,23 @@ def update_probs(dataset, question, answer, user_input, threshold):
         if feature_val == answer: #agreeing with user answer 
             if answer == 0: #
                 if user_input == "n":
-                    p = 0.99
+                    p = 0.9
                 if user_input == "mb":
                     p = 0.75
             elif answer == 1: 
                 if user_input == "y":
-                    p = 0.99
+                    p = 0.9
                 if user_input == "my":
                     p = 0.75
         else: 
             if answer == 0: #
                 if user_input == "n":
-                    p = 0.01
+                    p = 0.1
                 if user_input == "mb":
                     p = 0.25
             elif answer == 1: 
                 if user_input == "y":
-                    p = 0.01 
+                    p = 0.1
                 if user_input == "my":
                     p = 0.25
         
