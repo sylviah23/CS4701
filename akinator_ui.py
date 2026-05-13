@@ -87,17 +87,27 @@ def build_features(person_data):
 
     return features
 
+def get_total_site_links(people):
+    count = 0
+    for person in people:
+        count += int(person.get("sitelinks", {}).get("value", "0"))
+    return count
+
 def build_all_features(people):
+    total_site_links = get_total_site_links(people)
+
     dataset = {}
     for person in people:
         name = person.get("personLabel", {}).get("value", "Unknown")
         qid = person["person"]["value"].split("/")[-1]
         dataset[qid] = build_features(person)
         dataset[qid]["name"] = name
-        dataset[qid]["prob"] = 1
 
-    for v in dataset.values(): 
-        v["prob"] /= len(dataset)
+        # initial prior probabilities are equal to the site links / total site links
+        # if there are no site links associated with a person it defaults to 1
+        site_links = int(person.get("sitelinks", {}).get("value", "1"))
+        dataset[qid]["prob"] = site_links / total_site_links
+
     return dataset
 
 def best_question(dataset, questions): 
@@ -173,23 +183,23 @@ def update_probs(dataset, question, answer, user_input, threshold):
         if feature_val == answer: #agreeing with user answer 
             if answer == 0: #
                 if user_input == "n":
-                    p = 0.95 
+                    p = 0.99
                 if user_input == "mb":
                     p = 0.75
             elif answer == 1: 
                 if user_input == "y":
-                    p = 0.95 
+                    p = 0.99
                 if user_input == "my":
                     p = 0.75
         else: 
             if answer == 0: #
                 if user_input == "n":
-                    p = 0.05 
+                    p = 0.01
                 if user_input == "mb":
                     p = 0.25
             elif answer == 1: 
                 if user_input == "y":
-                    p = 0.05 
+                    p = 0.01 
                 if user_input == "my":
                     p = 0.25
         
@@ -392,18 +402,8 @@ def main():
         current_dataset = update_probs(current_dataset, to_ask, answer, user_input, 0.0001)
         # current_dataset = filter_dataset(current_dataset, to_ask, answer)
         questions_remain.remove(to_ask)
-        # questions_remain = remove_null_questions(questions_remain, current_dataset) #no longer removing null questions 
+        questions_remain = remove_null_questions(questions_remain, current_dataset) #no longer removing null questions 
         #since the dataset doesn't change -- this can be modified 
-        top10 = sorted(
-        current_dataset.items(),
-        key=lambda x: x[1]["prob"],
-        reverse=True
-        )[:10]
-
-   
-        for qid, data in top10:
-            print(qid, data.get("name", "Unknown"), data["prob"], data["is_politician"], )
-            print()
 
         likely, new_data = very_likely_person(current_dataset, 0.15) #current threshold at 0.5
         if likely: 
