@@ -164,11 +164,17 @@ def best_question(dataset, questions):
 #removes entries with very low probabilities 
 def normalize_probabilities(dataset, total, threshold): 
     filtered = {}
+    #most_likely = 0
     for name, data in dataset.items(): 
         new_prob =  dataset[name]["prob"]/total
         dataset[name]["prob"] = new_prob
-        if new_prob >= threshold: 
+        if new_prob >= threshold or threshold == -1: 
             filtered[name] = data 
+        #most_likely = max(most_likely, new_prob)
+    # for name, data in dataset.items(): 
+    #     new_prob = dataset[name]["prob"]
+        # if new_prob >= threshold or threshold == -1: 
+        #     filtered[name] = data 
     return filtered 
 
 def update_probs(dataset, question, answer, user_input, threshold):
@@ -394,12 +400,17 @@ def main():
 
     person_found = False
 
+    num_questions_asked = 0
+
     while len(questions_remain) > 0 and len(current_dataset) > 1:
         to_ask = best_question(current_dataset, questions_remain)
         user_input = ask(to_ask, len(current_dataset))
         question_answer_cache[to_ask] = user_input
         answer = 1 if (user_input == "y" or user_input == "my") else 0
-        current_dataset = update_probs(current_dataset, to_ask, answer, user_input, 0.0001)
+        if num_questions_asked < 3:
+            current_dataset = update_probs(current_dataset, to_ask, answer, user_input, -1)
+        else:
+            current_dataset = update_probs(current_dataset, to_ask, answer, user_input, 0.0001)
         # current_dataset = filter_dataset(current_dataset, to_ask, answer)
         questions_remain.remove(to_ask)
         questions_remain = remove_null_questions(questions_remain, current_dataset) #no longer removing null questions 
@@ -423,11 +434,18 @@ def main():
                     break
                 if not person_found: 
                     current_dataset = splice_wrong_people(current_dataset, new_data)
+        num_questions_asked += 1
 
     console.print(Rule(style="dim"))
     console.print("\n[bold yellow]🤔 Let me think...[/bold yellow]\n")
 
-    for qid, data in current_dataset.items():
+    sorted_current_dataset = sorted(
+        current_dataset.items(),
+        key=lambda item: item[1]["prob"],
+        reverse=True
+    )
+
+    for qid, data in sorted_current_dataset:
         name = data.get("name", qid)
         console.print(Panel.fit(
             f"[bold]Is your person [magenta]{name}[/magenta]?[/bold]",
