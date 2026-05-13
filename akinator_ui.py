@@ -23,6 +23,14 @@ def get_age(birthday):
     except:
         return None
 
+def get_birth_year(birthday):
+    if not birthday:
+        return None
+    try:
+        return int(birthday[:birthday.index('-')])
+    except:
+        return None
+
 def country_to_continent(region):
     try:
         country = pycountry.countries.lookup(region)
@@ -58,11 +66,14 @@ def build_features(person_data):
     birthday = person_data.get("birthDate")
     if birthday:
         val = birthday.get("value") if isinstance(birthday, dict) else birthday
-        age = get_age(val)
-        if age is not None:
-            features["age_under_30"] = 1 if age < 30 else 0
-            features["age_30_to_50"] = 1 if 30 <= age <= 50 else 0
-            features["age_over_50"] = 1 if age > 50 else 0
+        birth_year = get_birth_year(val)
+        if birth_year is not None:
+            features["born_before_1800"] = 1 if birth_year < 1800 else 0
+            features["born_1800_to_1900"] = 1 if 1800 <= birth_year <= 1900 else 0
+            features["born_1900_to_1930"] = 1 if 1900 <= birth_year <= 1930 else 0
+            features["born_1930_to_1950"] = 1 if 1930 <= birth_year <= 1950 else 0
+            features["born_1950_to_1970"] = 1 if 1950 <= birth_year <= 1970 else 0
+            features["born_after_1970"] = 1 if birth_year > 1970 else 0
 
     nationality = person_data.get("nationalities", [])
     if nationality:
@@ -218,7 +229,6 @@ def update_probs(dataset, question, answer, user_input, threshold):
 
     # normalize 
     updated = normalize_probabilities(updated, total, threshold)
-    
     return updated
 
 def very_likely_person(dataset, threshold):
@@ -402,7 +412,7 @@ def main():
 
     num_questions_asked = 0
 
-    while len(questions_remain) > 0 and len(current_dataset) > 1:
+    while len(questions_remain) > 0 and len(current_dataset) > 1 and not person_found:
         to_ask = best_question(current_dataset, questions_remain)
         user_input = ask(to_ask, len(current_dataset))
         question_answer_cache[to_ask] = user_input
@@ -428,8 +438,7 @@ def main():
                 if answer == "y":
                     console.print(Panel.fit(
                     f"[bold green]🎉 I got it! Your person is {name}![/bold green]",
-                    border_style="green"
-            ))
+                    border_style="green"))
                     person_found = True
                     break
                 if not person_found: 

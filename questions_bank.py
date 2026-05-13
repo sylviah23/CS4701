@@ -29,9 +29,12 @@ OCCUPATION_QUESTIONS = ["is_actor",
                         "is_theologian",
                         "is_sculptor"]
 
-AGE_QUESTIONS = ["age_under_30", 
-                 "age_30_to_50",
-                 "age_over_50"]
+AGE_QUESTIONS = ["born_before_1800",
+                "born_1800_to_1900",
+                "born_1900_to_1930",
+                "born_1930_to_1950",
+                "born_1950_to_1970",
+                "born_after_1970"]
 
 NATIONALITY_QUESTIONS = ["from_North_America", 
                          "from_South_America", 

@@ -10938,54 +10938,6 @@
   {
     "person": {
       "type": "uri",
-      "value": "http://www.wikidata.org/entity/Q4616"
-    },
-    "sitelinks": {
-      "datatype": "http://www.w3.org/2001/XMLSchema#integer",
-      "type": "literal",
-      "value": "239"
-    },
-    "birthDate": {
-      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
-      "type": "literal",
-      "value": "1926-06-01T00:00:00Z"
-    },
-    "personLabel": {
-      "xml:lang": "en",
-      "type": "literal",
-      "value": "Marilyn Monroe"
-    },
-    "genderLabel": {
-      "xml:lang": "en",
-      "type": "literal",
-      "value": "female"
-    },
-    "category": {
-      "value": "singer"
-    },
-    "is_alive": 0,
-    "nationalities": [
-      "United States"
-    ],
-    "award_features": {
-      "won_oscar": 0,
-      "won_emmy": 0,
-      "won_tony": 0,
-      "won_grammy": 0,
-      "won_nobel": 0,
-      "won_olympic": 0
-    },
-    "instrument_features": {
-      "plays_strings": 1,
-      "plays_keys": 0,
-      "plays_wind": 0,
-      "plays_percussion": 0,
-      "plays_vocals": 1
-    }
-  },
-  {
-    "person": {
-      "type": "uri",
       "value": "http://www.wikidata.org/entity/Q4617"
     },
     "sitelinks": {
