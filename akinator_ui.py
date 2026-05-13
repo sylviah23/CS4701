@@ -187,9 +187,18 @@ def ask(question, remaining):
     label = QUESTION_LABELS.get(question, question.replace("_", " ").capitalize() + "?")
     console.print(f"\n[bold cyan]Q:[/bold cyan] {label}")
     console.print(f"[dim]({remaining} people remaining)[/dim]")
+    console.print(
+        "[dim]"
+        "y = yes    "
+        "my = maybe yes    "
+        "mb = maybe no    "
+        "n = no"
+        "[/dim]"
+    )
+
     while True:
-        answer = Prompt.ask("[bold]Your answer[/bold]", choices=["y", "n"], default="y")
-        if answer in ("y", "n"):
+        answer = Prompt.ask("[bold]Your answer[/bold]", choices=["y", "my", "mb", "n"], default="y")
+        if answer in ("y", "my", "mb", "n"):
             return answer
 
 def add_user_answer(user_answer, question_answer_cache, birthday, nationality):

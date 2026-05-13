@@ -2,6 +2,7 @@ import json
 import questions_bank
 from pycountry_convert import country_alpha2_to_continent_code
 import pycountry
+from rich.console import Console
 
 CURRENT_YEAR = 2026
 
@@ -132,9 +133,9 @@ def build_features(person_data):
 
     return features
 
-
+#returns the best question to ask based on a question with the highest gini product 
 def best_question(dataset, questions):
-    max = -1
+    curr = -1
     index = -1
     len_data = len(dataset.items())
 
@@ -147,20 +148,72 @@ def best_question(dataset, questions):
 
             fraction = count/len_data
 
-            if ((fraction)*(1-fraction)) > max: 
-                max = (fraction)*(1-fraction)
+            entropy = (fraction)*(1-fraction)
+            if entropy > curr: 
+                curr = entropy 
                 index = q
                 
     return questions[index]
 
-
-def ask_question(dataset, question, answer):
+#normalizes the recomputed probabilities for ask_question 
+#removes entries with very low probabilities 
+def normalize_probabilities(dataset, total, threshold): 
     filtered = {}
-    for name, data in dataset.items():
-        if data.get(question, 0) == answer:
-            filtered[name] = data
+    for name, data in dataset.items(): 
+        new_prob =  dataset[name]["prob"]/total
+        dataset[name]["prob"] = new_prob
+        if new_prob >= threshold: 
+            filtered[name] = data 
+    return filtered 
+
+#asks a question and updates each person's probability in a bayesian inference fashion 
+def ask_question(dataset, question, answer, user_input):
+    filtered = dataset.copy()
+    total = 0 
+    for name, data in filtered.items():
+        if data.get(question, 0) == answer: #The feature exists and we favor yes
+            if user_input == 'y':
+                cond = .9
+            elif user_input == "my":
+                cond = .7
+            elif user_input == "mb":
+                cond = 0.3
+            else:
+                cond = 0.1
+        else: #The feature doesn't exist and we favor no  
+            if user_input == 'y':
+                cond = .1
+            elif user_input == "my":
+                cond = .3
+            elif user_input == "mb":
+                cond = 0.7
+            else:
+                cond = 0.9
+            
+        new_prob = filtered[name]["prob"] * cond 
+        total += new_prob
+        filtered[name]["prob"] = new_prob
+    filtered = normalize_probabilities(filtered, total, 0.0001)
+
     return filtered
 
+#The Akinator will return a person if their probability is higher than a set threshold 
+def very_likely_person(dataset, threshold):
+    new_data = {}
+    found = False
+    for person, data in dataset.items():
+        if dataset[person]["prob"] >= threshold: 
+            found = True 
+            new_data[person] = data
+    
+    return (found, new_data)
+
+def splice_wrong_people(curr_data, new_data):
+    to_ret = {}
+    for name, data in curr_data.items(): 
+        if name not in new_data: 
+            to_ret[name] = data
+    return to_ret 
 
 # this removes any questions that does not help the akinator. that is, if all the people
 # remaining would say "yes" to a question or all say "no", asking this question adds no
@@ -204,6 +257,8 @@ def build_all_features(people):
         qid = person["person"]["value"].split("/")[-1]
         full_feature_dataset[qid] = build_features(person)
         full_feature_dataset[qid]["name"] = name
+        #initializing all to have equal probabilities 
+        full_feature_dataset[qid]["prob"] = 1/len(people)
     return full_feature_dataset
 
 
@@ -211,7 +266,7 @@ def add_secondary_data_user_answer(question, json_category, json_entry):
     if json_category not in json_entry:
         json_entry[json_category] = {}
     if answer == "y":
-        json_entry[json_category][question] = 0
+        json_entry[json_category][question] = 0 #check this bug -- I think this needs to be flipped 
     else:
         json_entry[json_category][question] = 1
     return json_entry
@@ -267,6 +322,7 @@ def add_user_answer(user_answer,question_answer_cache, birthday, nationality):
 
 
 if __name__ == "__main__":
+    console = Console()
     with open("people_enriched.json","r") as f:
         people = json.load(f)
     current_dataset = build_all_features(people)
@@ -278,13 +334,35 @@ if __name__ == "__main__":
         to_ask = best_question(current_dataset, questions_remain)
         user_input = input(f"{to_ask.replace('_', ' ').capitalize()}? (y/n): ").strip().lower()
         question_answer_cache[to_ask] = user_input
-        answer = 1 if user_input == "y" else 0
-        current_dataset = ask_question(current_dataset, to_ask, answer)
+        
+        answer = 1 if (user_input == "y" or user_input == "my") else 0
+
+        current_dataset = ask_question(current_dataset, to_ask, answer, user_input)
         questions_remain = remove_null_questions(questions_remain, current_dataset)
         
+
+        # if len(current_dataset) <= 40: 
+        #     for name, data in current_dataset.items(): 
+        #         console.print(data["prob"])
+
         # dataset only has 1 or 0 people, break and ask for it directly below or say you can't find it
         if len(current_dataset) <= 1:
             break
+
+        #if someone has a high probability they can be printed 
+        likely, new_data = very_likely_person(current_dataset, 0.5) #current threshold at 0.5 
+        if likely: 
+            # console.print("1")
+            # for x in new_data: 
+            #     prob = new_data[x]["prob"]
+            #     print(prob)
+            person_found = ask_individuals(new_data)
+            if not person_found: 
+                current_dataset = splice_wrong_people(current_dataset, new_data)
+                total = sum(d["prob"] for d in current_dataset.values())
+                current_dataset = normalize_probabilities(current_dataset, total, 0)
+            # if not person_found: 
+            #     continue 
 
     if (not person_found):
         person_found = ask_individuals(current_dataset)
