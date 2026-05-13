@@ -164,41 +164,45 @@ def normalize_probabilities(dataset, total, threshold):
 def update_probs(dataset, question, answer, user_input, threshold):
     updated = {}
     total = 0
-
+    
     for name, data in dataset.items():
-
         feature_val = data.get(question, 0)
 
         p = 1
 
         if feature_val == answer: #agreeing with user answer 
-            if user_input == "y":
-                p = 0.95
-            elif user_input == "my":
-                p = 0.75
-            elif user_input == "mb":
-                p = 0.25
-            else:
-                p = 0.05
-        else: #disagreeing with user answer 
-            if user_input == "y":
-                p = 0.05
-            elif user_input == "my":
-                p = 0.25
-            elif user_input == "mb":
-                p = 0.75
-            else:
-                p = 0.95
-
+            if answer == 0: #
+                if user_input == "n":
+                    p = 0.95 
+                if user_input == "mb":
+                    p = 0.75
+            elif answer == 1: 
+                if user_input == "y":
+                    p = 0.95 
+                if user_input == "my":
+                    p = 0.75
+        else: 
+            if answer == 0: #
+                if user_input == "n":
+                    p = 0.05 
+                if user_input == "mb":
+                    p = 0.25
+            elif answer == 1: 
+                if user_input == "y":
+                    p = 0.05 
+                if user_input == "my":
+                    p = 0.25
+        
         new_p = data["prob"] * p
-
+        
         updated[name] = data.copy()
         updated[name]["prob"] = new_p
+    
         total += new_p
 
     # normalize 
     updated = normalize_probabilities(updated, total, threshold)
-
+    
     return updated
 
 def very_likely_person(dataset, threshold):
@@ -385,13 +389,23 @@ def main():
         user_input = ask(to_ask, len(current_dataset))
         question_answer_cache[to_ask] = user_input
         answer = 1 if (user_input == "y" or user_input == "my") else 0
-        current_dataset = update_probs(current_dataset, to_ask, answer, user_input, 0)
+        current_dataset = update_probs(current_dataset, to_ask, answer, user_input, 0.0001)
         # current_dataset = filter_dataset(current_dataset, to_ask, answer)
         questions_remain.remove(to_ask)
         # questions_remain = remove_null_questions(questions_remain, current_dataset) #no longer removing null questions 
         #since the dataset doesn't change -- this can be modified 
+        top10 = sorted(
+        current_dataset.items(),
+        key=lambda x: x[1]["prob"],
+        reverse=True
+        )[:10]
 
-        likely, new_data = very_likely_person(current_dataset, 0.1) #current threshold at 0.5
+   
+        for qid, data in top10:
+            print(qid, data.get("name", "Unknown"), data["prob"], data["is_politician"], )
+            print()
+
+        likely, new_data = very_likely_person(current_dataset, 0.15) #current threshold at 0.5
         if likely: 
             for qid, data in current_dataset.items(): 
                 name = data.get("name", qid)
@@ -399,16 +413,16 @@ def main():
             f"[bold]Is your person [magenta]{name}[/magenta]?[/bold]",
             border_style="yellow"
         ))
-            answer = Prompt.ask("[bold]Your answer[/bold]", choices=["y", "n"])
-            if answer == "y":
-                console.print(Panel.fit(
-                f"[bold green]🎉 I got it! Your person is {name}![/bold green]",
-                border_style="green"
+                answer = Prompt.ask("[bold]Your answer[/bold]", choices=["y", "n"])
+                if answer == "y":
+                    console.print(Panel.fit(
+                    f"[bold green]🎉 I got it! Your person is {name}![/bold green]",
+                    border_style="green"
             ))
-                person_found = True
-                break
-            if not person_found: 
-                current_dataset = splice_wrong_people(current_dataset, new_data)
+                    person_found = True
+                    break
+                if not person_found: 
+                    current_dataset = splice_wrong_people(current_dataset, new_data)
 
     console.print(Rule(style="dim"))
     console.print("\n[bold yellow]🤔 Let me think...[/bold yellow]\n")
