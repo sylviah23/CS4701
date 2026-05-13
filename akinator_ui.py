@@ -453,14 +453,14 @@ def main():
         questions_remain = remove_null_questions(questions_remain, current_dataset, 0.003) 
         #since the dataset doesn't change -- this can be modified 
 
-        top10 = sorted(
-    current_dataset.items(),
-    key=lambda x: x[1]["prob"],
-    reverse=True
-        )[:10]
+    #     top10 = sorted(
+    # current_dataset.items(),
+    # key=lambda x: x[1]["prob"],
+    # reverse=True
+    #     )[:10]
 
-        for qid, data in top10:
-            print(qid, data.get("name", "Unknown"), data["prob"])
+        # for qid, data in top10:
+        #     print(qid, data.get("name", "Unknown"), data["prob"])
 
         likely, new_data = very_likely_person(current_dataset, 0.15) #current threshold at 0.5
         if likely:
@@ -476,7 +476,7 @@ def main():
                     f"[bold green]🎉 I got it! Your person is {name}![/bold green]",
                     border_style="green"))
                     person_found = True
-                    break
+                    return
                 if not person_found: 
                     current_dataset = splice_wrong_people(current_dataset, new_data)
         num_questions_asked += 1
@@ -503,7 +503,7 @@ def main():
                 border_style="green"
             ))
             person_found = True
-            break
+            return
 
     if not person_found:
         console.print(Panel.fit(
