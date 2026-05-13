@@ -331,14 +331,15 @@ def ask(question, remaining):
         "[dim]"
         "y = yes    "
         "my = maybe yes    "
+        "idk = not sure   "
         "mb = maybe no    "
         "n = no"
         "[/dim]"
     )
 
     while True:
-        answer = Prompt.ask("[bold]Your answer[/bold]", choices=["y", "my", "mb", "n"], default="y")
-        if answer in ("y", "my", "mb", "n"):
+        answer = Prompt.ask("[bold]Your answer[/bold]", choices=["y", "my", "idk", "mb", "n"], default="y")
+        if answer in ("y", "my", "idk", "mb", "n"):
             return answer
 
 def add_user_answer(user_answer, question_answer_cache, birthday, nationality):
@@ -406,14 +407,15 @@ def main():
         to_ask = best_question(current_dataset, questions_remain)
         user_input = ask(to_ask, len(current_dataset))
         question_answer_cache[to_ask] = user_input
-        answer = 1 if (user_input == "y" or user_input == "my") else 0
-        if num_questions_asked < 3:
-            current_dataset = update_probs(current_dataset, to_ask, answer, user_input, -1)
-        else:
-            current_dataset = update_probs(current_dataset, to_ask, answer, user_input, 0.0001)
+        if user_input != "idk":
+            answer = 1 if (user_input == "y" or user_input == "my") else 0
+            if num_questions_asked < 3:
+                current_dataset = update_probs(current_dataset, to_ask, answer, user_input, -1)
+            else:
+                current_dataset = update_probs(current_dataset, to_ask, answer, user_input, 0.0001)
         # current_dataset = filter_dataset(current_dataset, to_ask, answer)
         questions_remain.remove(to_ask)
-        questions_remain = remove_null_questions(questions_remain, current_dataset) #no longer removing null questions 
+        questions_remain = remove_null_questions(questions_remain, current_dataset) 
         #since the dataset doesn't change -- this can be modified 
 
         likely, new_data = very_likely_person(current_dataset, 0.15) #current threshold at 0.5
