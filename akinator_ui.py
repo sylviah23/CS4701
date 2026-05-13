@@ -8,6 +8,7 @@ from rich.prompt import Prompt
 from rich.text import Text
 from rich import box
 from rich.rule import Rule
+import math 
 
 console = Console()
 CURRENT_YEAR = 2026
@@ -93,9 +94,13 @@ def build_all_features(people):
         qid = person["person"]["value"].split("/")[-1]
         dataset[qid] = build_features(person)
         dataset[qid]["name"] = name
+        dataset[qid]["prob"] = 1
+
+    for v in dataset.values(): 
+        v["prob"] /= len(dataset)
     return dataset
 
-def best_question(dataset, questions):
+def best_question(dataset, questions): 
     best_q, best_score = questions[0], -1
     n = len(dataset)
     for q in questions:
@@ -104,6 +109,121 @@ def best_question(dataset, questions):
         if score > best_score:
             best_score, best_q = score, q
     return best_q
+
+# def best_question(dataset, questions): #selecting a best question with entropy 
+# weighting yes and no by the current probabilities in the database
+#     best_q = None
+#     best_score = -float("inf")  # entropy: lower is better
+
+#     total_mass = sum(d["prob"] for d in dataset.values())
+#     if total_mass == 0:
+#         return questions[0]
+
+#     for q in questions:
+#         p_yes = 0.0
+#         p_no = 0.0
+
+#         for d in dataset.values():
+#             prob = d["prob"]
+
+#             if d.get(q, 0) == 1:
+#                 p_yes += prob
+#             else:
+#                 p_no += prob
+
+#         # normalize
+#         p_yes /= total_mass
+#         p_no /= total_mass
+
+#         # avoid log(0)
+#         if p_yes == 0 or p_no == 0:
+#             score = 0
+#         else:
+#             score = -(
+#                 p_yes * math.log(p_yes) +
+#                 p_no * math.log(p_no)
+#             )
+
+#         if score > best_score:
+#             best_score = score
+#             best_q = q
+
+#     return best_q
+
+#normalizes the recomputed probabilities for ask_question 
+#removes entries with very low probabilities 
+def normalize_probabilities(dataset, total, threshold): 
+    filtered = {}
+    for name, data in dataset.items(): 
+        new_prob =  dataset[name]["prob"]/total
+        dataset[name]["prob"] = new_prob
+        if new_prob >= threshold: 
+            filtered[name] = data 
+    return filtered 
+
+def update_probs(dataset, question, answer, user_input, threshold):
+    updated = {}
+    total = 0
+
+    for name, data in dataset.items():
+
+        feature_val = data.get(question, 0)
+
+        p = 1
+
+        if feature_val == answer: #agreeing with user answer 
+            if user_input == "y":
+                p = 0.95
+            elif user_input == "my":
+                p = 0.75
+            elif user_input == "mb":
+                p = 0.25
+            else:
+                p = 0.05
+        else: #disagreeing with user answer 
+            if user_input == "y":
+                p = 0.05
+            elif user_input == "my":
+                p = 0.25
+            elif user_input == "mb":
+                p = 0.75
+            else:
+                p = 0.95
+
+        new_p = data["prob"] * p
+
+        updated[name] = data.copy()
+        updated[name]["prob"] = new_p
+        total += new_p
+
+    # normalize 
+    updated = normalize_probabilities(updated, total, threshold)
+
+    return updated
+
+def very_likely_person(dataset, threshold):
+    candidates = {
+        k: v for k, v in dataset.items()
+        if v["prob"] >= threshold
+    }
+
+    return (len(candidates) > 0, candidates)
+
+def splice_wrong_people(curr_data, new_data):
+    to_ret = {
+        k: v for k, v in curr_data.items()
+        if k not in new_data
+    }
+
+    total = sum(v["prob"] for v in to_ret.values())
+
+    if total == 0:
+        return to_ret
+
+    for v in to_ret.values():
+        v["prob"] /= total
+
+    return to_ret
 
 def filter_dataset(dataset, question, answer):
     return {k: v for k, v in dataset.items() if v.get(question, 0) == answer}
@@ -264,9 +384,31 @@ def main():
         to_ask = best_question(current_dataset, questions_remain)
         user_input = ask(to_ask, len(current_dataset))
         question_answer_cache[to_ask] = user_input
-        answer = 1 if user_input == "y" else 0
-        current_dataset = filter_dataset(current_dataset, to_ask, answer)
-        questions_remain = remove_null_questions(questions_remain, current_dataset)
+        answer = 1 if (user_input == "y" or user_input == "my") else 0
+        current_dataset = update_probs(current_dataset, to_ask, answer, user_input, 0)
+        # current_dataset = filter_dataset(current_dataset, to_ask, answer)
+        questions_remain.remove(to_ask)
+        # questions_remain = remove_null_questions(questions_remain, current_dataset) #no longer removing null questions 
+        #since the dataset doesn't change -- this can be modified 
+
+        likely, new_data = very_likely_person(current_dataset, 0.1) #current threshold at 0.5
+        if likely: 
+            for qid, data in current_dataset.items(): 
+                name = data.get("name", qid)
+                console.print(Panel.fit(
+            f"[bold]Is your person [magenta]{name}[/magenta]?[/bold]",
+            border_style="yellow"
+        ))
+            answer = Prompt.ask("[bold]Your answer[/bold]", choices=["y", "n"])
+            if answer == "y":
+                console.print(Panel.fit(
+                f"[bold green]🎉 I got it! Your person is {name}![/bold green]",
+                border_style="green"
+            ))
+                person_found = True
+                break
+            if not person_found: 
+                current_dataset = splice_wrong_people(current_dataset, new_data)
 
     console.print(Rule(style="dim"))
     console.print("\n[bold yellow]🤔 Let me think...[/bold yellow]\n")

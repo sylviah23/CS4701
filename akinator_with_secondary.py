@@ -252,13 +252,17 @@ def ask_individuals(current_dataset):
 
 def build_all_features(people):
     full_feature_dataset = {}
+    total = 0 
     for person in people:
         name = person.get("personLabel").get("value")
         qid = person["person"]["value"].split("/")[-1]
         full_feature_dataset[qid] = build_features(person)
         full_feature_dataset[qid]["name"] = name
         #initializing all to have equal probabilities 
-        full_feature_dataset[qid]["prob"] = 1/len(people)
+        sitelinks = int(person.get("sitelinks").get("value"))
+        full_feature_dataset[qid]["prob"] = sitelinks
+        total += sitelinks
+    full_feature_dataset = normalize_probabilities(full_feature_dataset, total, 0)
     return full_feature_dataset
 
 
