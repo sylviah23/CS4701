@@ -210,12 +210,12 @@ def extract_is_alive(entities):
 # Bucketing functions (QID label -> feature bucket)
 
 AWARD_BUCKETS = {
-    "won_oscar":   ["Academy Award", "Oscar"],
-    "won_emmy":    ["Emmy"],
-    "won_tony":    ["Tony Award"],
-    "won_grammy":  ["Grammy"],
-    "won_nobel":   ["Nobel"],
-    "won_olympic": ["Olympic"],
+    "won_oscar":   ["academy award", "oscar"],
+    "won_emmy":    ["emmy"],
+    "won_tony":    ["tony award"],
+    "won_grammy":  ["grammy"],
+    "won_nobel":   ["nobel"],
+    "won_olympic": ["olympic"],
 }
 
 SPORT_BUCKETS = {
@@ -342,8 +342,8 @@ def main():
     time.sleep(2)
     award_labels = resolve_labels(list(all_award_qids))
     award_buckets_map = {
-        qid: bucket_labels([award_labels.get(q, "") for q in qids], AWARD_BUCKETS)
-        for qid, qids in award_map_qid.items()
+    person_qid: bucket_labels([award_labels.get(aqid, "") for aqid in award_qids], AWARD_BUCKETS)
+    for person_qid, award_qids in award_map_qid.items()
     }
 
     # Sports
@@ -354,8 +354,8 @@ def main():
     time.sleep(2)
     sport_labels = resolve_labels(list(all_sport_qids))
     sport_buckets_map = {
-        qid: bucket_labels([sport_labels.get(q, "") for q in qids], SPORT_BUCKETS)
-        for qid, qids in sport_map_qid.items()
+        person_qid: bucket_labels([sport_labels.get(sqid, "") for sqid in sport_qids], SPORT_BUCKETS)
+        for person_qid, sport_qids in sport_map_qid.items()
     }
 
     # Instruments
@@ -366,8 +366,8 @@ def main():
     time.sleep(2)
     instrument_labels = resolve_labels(list(all_instrument_qids))
     instrument_buckets_map = {
-        qid: bucket_labels([instrument_labels.get(q, "") for q in qids], INSTRUMENT_BUCKETS)
-        for qid, qids in instrument_map_qid.items()
+        person_qid: bucket_labels([instrument_labels.get(iqid, "") for iqid in inst_qids], INSTRUMENT_BUCKETS)
+        for person_qid, inst_qids in instrument_map_qid.items()
     }
 
     # Positions (politicians)
@@ -378,8 +378,8 @@ def main():
     time.sleep(2)
     position_labels = resolve_labels(list(all_position_qids))
     position_buckets_map = {
-        qid: bucket_labels([position_labels.get(q, "") for q in qids], POLITICIAN_BUCKETS)
-        for qid, qids in position_map_qid.items()
+        person_qid: bucket_labels([position_labels.get(pqid, "") for pqid in pos_qids], POLITICIAN_BUCKETS)
+        for person_qid, pos_qids in position_map_qid.items()
     }
 
     # Fields (scientists)
@@ -390,8 +390,8 @@ def main():
     time.sleep(2)
     field_labels = resolve_labels(list(all_field_qids))
     field_buckets_map = {
-        qid: bucket_labels([field_labels.get(q, "") for q in qids], SCIENTIST_FIELD_BUCKETS)
-        for qid, qids in field_map_qid.items()
+        person_qid: bucket_labels([field_labels.get(fqid, "") for fqid in fld_qids], SCIENTIST_FIELD_BUCKETS)
+        for person_qid, fld_qids in field_map_qid.items()
     }
 
     # is_alive
