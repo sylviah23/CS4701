@@ -87,14 +87,20 @@ def build_nationality_features(person_data, features):
 
 
 def build_occupation_features(person_data, features):
-    occupation = person_data.get("category")
-    if occupation is not None:
-        for category in ["actor", "athlete", "singer", "politician", "scientist", "musician",
-                         "director", "author", "comedian", "businessman", "entrepreneur",
-                         "architect", "philosopher", "explorer", "inventor", "journalist",
-                         "chef", "fashion_designer", "activist", "monarch", "military_leader",
-                         "painter", "mathematician", "revolutionary", "theologian", "sculptor"]:
-            features[f"is_{category}"] = 1 if category in person_data["category"]["value"] else 0
+    # Use enriched occupation_features if available (supports multiple occupations)
+    occ_features = person_data.get("occupation_features")
+    if occ_features:
+        for k, v in occ_features.items():
+            features[k] = v
+    else:
+        # Fall back to single category field
+        category = person_data.get("category", {}).get("value", "")
+        for cat in ["actor", "athlete", "singer", "politician", "scientist", "musician",
+                    "director", "author", "comedian", "businessman", "entrepreneur",
+                    "architect", "philosopher", "explorer", "inventor", "journalist",
+                    "chef", "fashion_designer", "activist", "monarch", "military_leader",
+                    "painter", "mathematician", "revolutionary", "theologian", "sculptor"]:
+            features[f"is_{cat}"] = 1 if cat in category else 0
     return features
 
 

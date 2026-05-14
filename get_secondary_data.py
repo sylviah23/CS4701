@@ -253,6 +253,48 @@ SCIENTIST_FIELD_BUCKETS = {
     "field_computer_science": ["computer science", "artificial intelligence", "engineering"],
 }
 
+def extract_occupations(entities):
+    """Extract occupation QIDs (P106) for each person."""
+    occupation_map = {}
+    for qid, entity in entities.items():
+        claims = entity.get("claims", {})
+        occupations = get_claim_qids(claims, "P106")
+        if occupations:
+            occupation_map[qid] = occupations
+    return occupation_map
+
+
+# Maps occupation labels to our category buckets
+OCCUPATION_BUCKETS = {
+    "is_actor":           ["actor", "actress", "film actor", "voice actor"],
+    "is_singer":          ["singer", "vocalist", "rapper", "recording artist"],
+    "is_musician":        ["musician", "composer", "songwriter", "singer", "vocalist", "rapper", "instrumentalist", "conductor"],
+    "is_athlete":         ["athlete", "footballer", "basketball player", "tennis player", "swimmer", "boxer", "cyclist", "sprinter", "cricketer"],
+    "is_politician":      ["politician", "statesman", "diplomat"],
+    "is_scientist":       ["scientist", "researcher", "physicist", "chemist", "biologist", "astronomer", "geologist"],
+    "is_director":        ["film director", "television director", "director"],
+    "is_author":          ["author", "writer", "novelist", "poet", "journalist", "playwright"],
+    "is_comedian":        ["comedian", "humorist", "comic"],
+    "is_businessman":     ["businessperson", "businessman", "businesswoman", "executive", "ceo", "entrepreneur"],
+    "is_entrepreneur":    ["entrepreneur", "businessperson", "founder"],
+    "is_architect":       ["architect"],
+    "is_philosopher":     ["philosopher", "thinker"],
+    "is_explorer":        ["explorer", "navigator", "adventurer"],
+    "is_inventor":        ["inventor"],
+    "is_journalist":      ["journalist", "reporter", "correspondent", "editor"],
+    "is_chef":            ["chef", "cook"],
+    "is_fashion_designer":["fashion designer", "couturier"],
+    "is_activist":        ["activist", "social activist", "political activist"],
+    "is_monarch":         ["monarch", "king", "queen", "emperor", "empress", "pharaoh", "sultan", "tsar"],
+    "is_military_leader": ["military personnel", "general", "admiral", "military officer", "commander"],
+    "is_painter":         ["painter", "artist", "visual artist"],
+    "is_mathematician":   ["mathematician"],
+    "is_revolutionary":   ["revolutionary", "resistance fighter"],
+    "is_theologian":      ["theologian", "religious leader", "clergy", "bishop", "priest", "imam"],
+    "is_sculptor":        ["sculptor"],
+}
+
+
 def bucket_labels(labels, bucket_map):
     """Given a list of label strings and a bucket map, return which buckets apply."""
     result = {}
@@ -268,42 +310,34 @@ def bucket_labels(labels, bucket_map):
 
 def enrich_people(people, nationality_map, award_buckets_map, sport_buckets_map,
                   instrument_buckets_map, position_buckets_map, field_buckets_map,
-                  is_alive_map):
+                  is_alive_map, occupation_buckets_map):
     for person in people:
         qid = extract_qid(person)
-        category = person.get("category", {}).get("value", "")
 
-        # is_alive — use value from people.json if already set, else use P570 check
+        # is_alive
         if "is_alive" not in person:
             person["is_alive"] = is_alive_map.get(qid, None)
 
-        # Nationality (all categories)
+        # Nationality
         person["nationalities"] = nationality_map.get(qid, [])
 
-        # Awards (actor, director, singer, musician, comedian, scientist)
-        if category in ["actor", "director", "singer", "musician", "comedian", "scientist"]:
-            awards = award_buckets_map.get(qid, {})
-            person["award_features"] = awards
+        # Occupations — store full list so akinator can set multiple is_X flags
+        person["occupation_features"] = occupation_buckets_map.get(qid, {})
 
-        # Sports (athlete)
-        if category == "athlete":
-            sports = sport_buckets_map.get(qid, {})
-            person["sport_features"] = sports
+        # Awards — give to everyone
+        person["award_features"] = award_buckets_map.get(qid, {})
 
-        # Instruments (singer, musician)
-        if category in ["singer", "musician"]:
-            instruments = instrument_buckets_map.get(qid, {})
-            person["instrument_features"] = instruments
+        # Sports — give to everyone (non-athletes will just have all 0s)
+        person["sport_features"] = sport_buckets_map.get(qid, {})
 
-        # Positions (politician)
-        if category == "politician":
-            positions = position_buckets_map.get(qid, {})
-            person["position_features"] = positions
+        # Instruments — give to everyone
+        person["instrument_features"] = instrument_buckets_map.get(qid, {})
 
-        # Fields (scientist)
-        if category == "scientist":
-            fields = field_buckets_map.get(qid, {})
-            person["field_features"] = fields
+        # Positions — give to everyone
+        person["position_features"] = position_buckets_map.get(qid, {})
+
+        # Fields — give to everyone
+        person["field_features"] = field_buckets_map.get(qid, {})
 
     return people
 
@@ -342,8 +376,8 @@ def main():
     time.sleep(2)
     award_labels = resolve_labels(list(all_award_qids))
     award_buckets_map = {
-    person_qid: bucket_labels([award_labels.get(aqid, "") for aqid in award_qids], AWARD_BUCKETS)
-    for person_qid, award_qids in award_map_qid.items()
+        person_qid: bucket_labels([award_labels.get(aqid, "") for aqid in award_qids], AWARD_BUCKETS)
+        for person_qid, award_qids in award_map_qid.items()
     }
 
     # Sports
@@ -394,6 +428,18 @@ def main():
         for person_qid, fld_qids in field_map_qid.items()
     }
 
+    # Occupations
+    print("\nExtracting occupations...")
+    occupation_map_qid = extract_occupations(entities)
+    all_occupation_qids = set(q for qs in occupation_map_qid.values() for q in qs)
+    print(f"Resolving {len(all_occupation_qids)} occupation labels...")
+    time.sleep(2)
+    occupation_labels = resolve_labels(list(all_occupation_qids))
+    occupation_buckets_map = {
+        person_qid: bucket_labels([occupation_labels.get(oqid, "") for oqid in occ_qids], OCCUPATION_BUCKETS)
+        for person_qid, occ_qids in occupation_map_qid.items()
+    }
+
     # is_alive
     print("\nExtracting alive/dead status...")
     is_alive_map = extract_is_alive(entities)
@@ -410,6 +456,7 @@ def main():
         position_buckets_map,
         field_buckets_map,
         is_alive_map,
+        occupation_buckets_map,
     )
 
     with open("people_enriched.json", "w", encoding="utf-8") as f:

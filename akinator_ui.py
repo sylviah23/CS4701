@@ -81,13 +81,19 @@ def build_features(person_data):
         for continent in ["North_America","South_America","Europe","Africa","Asia","Australia"]:
             features[f"from_{continent}"] = 1 if real_nat == continent else 0
 
-    category = person_data.get("category", {}).get("value", "")
-    for cat in ["actor", "athlete", "singer", "politician", "scientist", "musician",
-                "director", "author", "comedian", "businessman", "entrepreneur",
-                "architect", "philosopher", "explorer", "inventor", "journalist",
-                "chef", "fashion_designer", "activist", "monarch", "military_leader",
-                "painter", "mathematician", "revolutionary", "theologian", "sculptor"]:
-        features[f"is_{cat}"] = 1 if cat in category else 0
+    # Occupations — use enriched occupation_features if available (supports multiple occupations)
+    occ_features = person_data.get("occupation_features")
+    if occ_features:
+        for k, v in occ_features.items():
+            features[k] = v
+    else:
+        category = person_data.get("category", {}).get("value", "")
+        for cat in ["actor", "athlete", "singer", "politician", "scientist", "musician",
+                    "director", "author", "comedian", "businessman", "entrepreneur",
+                    "architect", "philosopher", "explorer", "inventor", "journalist",
+                    "chef", "fashion_designer", "activist", "monarch", "military_leader",
+                    "painter", "mathematician", "revolutionary", "theologian", "sculptor"]:
+            features[f"is_{cat}"] = 1 if cat in category else 0
 
     is_alive = person_data.get("is_alive")
     if is_alive is not None:
