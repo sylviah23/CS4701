@@ -151878,6 +151878,11 @@
       "type": "literal",
       "value": "68"
     },
+    "birthDate": {
+      "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "type": "literal",
+      "value": "-0200-01-01T00:00:00Z"
+    },
     "personLabel": {
       "xml:lang": "en",
       "type": "literal",
@@ -151891,9 +151896,9 @@
     "category": {
       "value": "philosopher"
     },
-    "is_alive": 1,
+    "is_alive": 0,
     "nationalities": [
-      "Ancient Rome"
+      "Italy"
     ],
     "occupation_features": {
       "is_actor": 0,
